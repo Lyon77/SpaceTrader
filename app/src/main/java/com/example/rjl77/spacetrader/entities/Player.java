@@ -3,7 +3,7 @@ package com.example.rjl77.spacetrader.entities;
 public class Player {
     private String name;
     private int credits;
-    private String ship;
+    private Ship ship;
 
     public Player() {
         this("Ryan");
@@ -23,7 +23,12 @@ public class Player {
         return this.credits;
     }
 
-    public String getShip() {
+    public Ship getShip() {
         return this.ship;
+    }
+
+    @Override
+    public String toString() {
+        return "Name: " + this.name + " " + "Credits: " + credits + " " + "Ship: " + ship.toString();
     }
 }
