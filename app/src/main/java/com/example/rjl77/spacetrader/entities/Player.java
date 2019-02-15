@@ -12,7 +12,7 @@ public class Player {
     public Player(String name) {
         this.name = name;
         this.credits = 1000;
-        this.ship = "Gnat";
+        this.ship = new Ship();
     }
 
     public String getName() {
