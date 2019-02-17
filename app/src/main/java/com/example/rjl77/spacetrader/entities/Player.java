@@ -27,6 +27,7 @@ public class Player {
         return this.ship;
     }
 
+//    @androidx.annotation.NonNull
     @Override
     public String toString() {
         return "Name: " + this.name + " " + "Credits: " + credits + " " + "Ship: " + ship.toString();
