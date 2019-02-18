@@ -1,25 +1,26 @@
 package com.example.rjl77.spacetrader.game;
 
+import com.example.rjl77.spacetrader.entities.GameDifficulty;
 import com.example.rjl77.spacetrader.entities.Player;
 
 public class Game {
-    private String level;
+    private GameDifficulty level;
     private Player p;
 
     public Game() {
-        this("easy", new Player());
+        this(GameDifficulty.EASY, new Player());
     }
 
-    public Game(String level, Player p) {
-        this.level = level;
+    public Game(GameDifficulty _level, Player p) {
+        level = _level;
         this.p = p;
     }
 
-    public String getLevel() {
+    public GameDifficulty getLevel() {
         return this.level;
     }
 
-    public void setLevel(String level) {
+    public void setLevel(GameDifficulty level) {
         this.level = level;
     }
 
@@ -30,4 +31,6 @@ public class Game {
     public void setPlayer(Player p) {
         this.p = p;
     }
+
+
 }
