@@ -4,11 +4,14 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Spinner;
 
 
 import com.example.rjl77.spacetrader.R;
+import com.example.rjl77.spacetrader.entities.GameDifficulty;
 import com.example.rjl77.spacetrader.entities.Player;
 import com.example.rjl77.spacetrader.game.Game;
 
@@ -51,6 +54,12 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
         });
+
+        //set difficulty
+        Spinner gameDifficultySpinner = findViewById(R.id.game_difficulty_spinner);
+        ArrayAdapter<GameDifficulty> adapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_item, GameDifficulty.values());
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        gameDifficultySpinner.setAdapter(adapter);
 
         //button to exit the game and close the app
         Button exit =  findViewById(R.id.button_exit);
