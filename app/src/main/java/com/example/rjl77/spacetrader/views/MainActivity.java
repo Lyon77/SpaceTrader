@@ -9,13 +9,19 @@ import android.widget.EditText;
 
 
 import com.example.rjl77.spacetrader.R;
+import com.example.rjl77.spacetrader.entities.Player;
+import com.example.rjl77.spacetrader.game.Game;
 
 public class MainActivity extends AppCompatActivity {
+
+    private Game game;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        game = new Game();
 
         //Gets the button to create the player
         Button create =  findViewById(R.id.button_create);
@@ -33,12 +39,14 @@ public class MainActivity extends AppCompatActivity {
                     EditText engineer_skill = findViewById(R.id.engineer_skill_points);
                     int engineer = Integer.parseInt(engineer_skill.getText().toString());
 
-                    if (pilot + fighter + trader + engineer != 16) {
-                        Log.i("Confirm sum to 16", "Does not sum to 16");
+                    if (pilot + fighter + trader + engineer == 16) {
+                        game.setPlayer(new Player("Phil", pilot, fighter, trader, engineer));
+                        Log.i("Player", game.getPlayer().toString());
+                    } else {
+                        Log.e("Value", "Does not sum to 16");
                     }
-                    Log.i("Check", "Create Button Works");
                 } catch (NumberFormatException exc) {
-                    Log.i("Valid inputs", "Invalid inputs");
+                    Log.e("Fail", exc.getMessage());
 
                 }
             }
