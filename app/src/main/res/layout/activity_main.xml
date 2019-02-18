@@ -41,7 +41,7 @@
         app:layout_constraintEnd_toEndOf="parent" />
 
     <RelativeLayout
-        android:id="@+id/relative-pilot-skill"
+        android:id="@+id/relative_pilot_skill"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="79dp"
@@ -50,18 +50,18 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <TextView
-            android:id="@+id/pilot-skill-text"
+            android:id="@+id/pilot_skill_text"
             android:layout_width="105dp"
             android:layout_height="19dp"
             android:layout_centerVertical="true"
             android:text="Pilot Skill Points:" />
 
         <EditText
-            android:id="@+id/pilot-skill-points"
+            android:id="@+id/pilot_skill_points"
             android:layout_width="190dp"
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
-            android:layout_toRightOf="@id/pilot-skill-text"
+            android:layout_toRightOf="@id/pilot_skill_text"
             android:hint="Pilot Skill Points"
             android:inputType="number"
             android:singleLine="true"
@@ -70,7 +70,7 @@
     </RelativeLayout>
 
     <RelativeLayout
-        android:id="@+id/relative-fighter-skill"
+        android:id="@+id/relative_fighter_skill"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="62dp"
@@ -79,18 +79,18 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <TextView
-            android:id="@+id/fighter-skill-text"
+            android:id="@+id/fighter_skill_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
             android:text="Fighter Skill Points:" />
 
         <EditText
-            android:id="@+id/fighter-skill-points"
+            android:id="@+id/fighter_skill_points"
             android:layout_width="190dp"
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
-            android:layout_toRightOf="@id/fighter-skill-text"
+            android:layout_toRightOf="@id/fighter_skill_text"
             android:hint="Fighter Skill Points"
             android:inputType="number"
             android:singleLine="true"
@@ -99,7 +99,7 @@
     </RelativeLayout>
 
     <RelativeLayout
-        android:id="@+id/relative-trader-skill"
+        android:id="@+id/relative_trader_skill"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintStart_toStartOf="parent"
@@ -108,18 +108,18 @@
         android:layout_marginTop="210dp">
 
         <TextView
-            android:id="@+id/trader-skill-text"
+            android:id="@+id/trader_skill_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
             android:text="Trader Skill Points:" />
 
         <EditText
-            android:id="@+id/trader-skill-points"
+            android:id="@+id/trader_skill_points"
             android:layout_width="190dp"
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
-            android:layout_toRightOf="@id/trader-skill-text"
+            android:layout_toRightOf="@id/trader_skill_text"
             android:hint="Trader Skill Points"
             android:inputType="number"
             android:singleLine="true"
@@ -128,7 +128,7 @@
     </RelativeLayout>
 
     <RelativeLayout
-        android:id="@+id/relative-engineer-skill"
+        android:id="@+id/relative_engineer_skill"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintStart_toStartOf="parent"
@@ -137,18 +137,18 @@
         android:layout_marginTop="250dp">
 
         <TextView
-            android:id="@+id/engineer-skill-text"
+            android:id="@+id/engineer_skill_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
             android:text="Engineer Skill Points:" />
 
         <EditText
-            android:id="@+id/engineer-skill-points"
+            android:id="@+id/engineer_skill_points"
             android:layout_width="190dp"
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
-            android:layout_toRightOf="@id/engineer-skill-text"
+            android:layout_toRightOf="@id/engineer_skill_text"
             android:hint="Engineer Skill Points"
             android:inputType="number"
             android:singleLine="true"
