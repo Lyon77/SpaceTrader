@@ -4,6 +4,10 @@ public class Player {
     private String name;
     private int credits;
     private Ship ship;
+    private int pilot;
+    private int fighter;
+    private int trader;
+    private int engineer;
 
     public Player() {
         this("Ryan");
