@@ -10,6 +10,7 @@ import android.widget.EditText;
 import android.widget.Spinner;
 
 
+
 import com.example.rjl77.spacetrader.R;
 import com.example.rjl77.spacetrader.entities.GameDifficulty;
 import com.example.rjl77.spacetrader.entities.Player;
@@ -47,12 +48,11 @@ public class MainActivity extends AppCompatActivity {
                     String name = username.getText().toString();
 
 
-
-                    if (pilot + fighter + trader + engineer == 16) {
+                    if (pilot + fighter + trader + engineer == 16 && !name.equals("") && name != null) {
                         game.setPlayer(new Player(name, pilot, fighter, trader, engineer, text));
                         Log.i("Player", game.getPlayer().toString());
                     } else {
-                        Log.e("Value", "Does not sum to 16");
+                        Log.e("Value", "Invalid inputs");
                     }
                 } catch (NumberFormatException exc) {
                     Log.e("Fail", exc.getMessage());
