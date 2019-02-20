@@ -43,10 +43,13 @@ public class MainActivity extends AppCompatActivity {
                     int engineer = Integer.parseInt(engineer_skill.getText().toString());
                     Spinner mySpinner = findViewById(R.id.game_difficulty_spinner);
                     String text = mySpinner.getSelectedItem().toString();
+                    EditText username = findViewById(R.id.username_entry);
+                    String name = username.getText().toString();
+
 
 
                     if (pilot + fighter + trader + engineer == 16) {
-                        game.setPlayer(new Player("Phil", pilot, fighter, trader, engineer, text));
+                        game.setPlayer(new Player(name, pilot, fighter, trader, engineer, text));
                         Log.i("Player", game.getPlayer().toString());
                     } else {
                         Log.e("Value", "Does not sum to 16");
