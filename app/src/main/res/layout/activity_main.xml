@@ -84,10 +84,10 @@
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
             android:layout_toRightOf="@id/pilot_skill_text"
+            android:gravity="center"
             android:hint="Pilot Skill Points"
             android:inputType="number"
-            android:singleLine="true"
-            android:gravity="center"/>
+            android:singleLine="true" />
 
     </RelativeLayout>
 
@@ -113,10 +113,10 @@
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
             android:layout_toRightOf="@id/fighter_skill_text"
+            android:gravity="center"
             android:hint="Fighter Skill Points"
             android:inputType="number"
-            android:singleLine="true"
-            android:gravity="center"/>
+            android:singleLine="true" />
 
     </RelativeLayout>
 
@@ -124,10 +124,10 @@
         android:id="@+id/relative_trader_skill"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
         android:layout_marginLeft="64dp"
-        android:layout_marginTop="210dp">
+        android:layout_marginTop="210dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
         <TextView
             android:id="@+id/trader_skill_text"
@@ -142,10 +142,10 @@
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
             android:layout_toRightOf="@id/trader_skill_text"
+            android:gravity="center"
             android:hint="Trader Skill Points"
             android:inputType="number"
-            android:singleLine="true"
-            android:gravity="center"/>
+            android:singleLine="true" />
 
     </RelativeLayout>
 
@@ -153,10 +153,10 @@
         android:id="@+id/relative_engineer_skill"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
         android:layout_marginLeft="50dp"
-        android:layout_marginTop="250dp">
+        android:layout_marginTop="250dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
         <TextView
             android:id="@+id/engineer_skill_text"
@@ -171,13 +171,41 @@
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
             android:layout_toRightOf="@id/engineer_skill_text"
+            android:gravity="center"
             android:hint="Engineer Skill Points"
             android:inputType="number"
-            android:singleLine="true"
-            android:gravity="center"/>
+            android:singleLine="true" />
 
     </RelativeLayout>
 
+    <RelativeLayout
+        android:id="@+id/relative_username"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="62dp"
+        android:layout_marginTop="400dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/username_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="Username:" />
+
+        <EditText
+            android:id="@+id/username_entry"
+            android:layout_width="190dp"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/username_text"
+            android:gravity="center"
+            android:hint="Username"
+            android:inputType="text"
+            android:singleLine="true" />
+
+    </RelativeLayout>
 
 
 </android.support.constraint.ConstraintLayout>
