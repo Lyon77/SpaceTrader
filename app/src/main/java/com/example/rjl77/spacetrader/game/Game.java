@@ -28,6 +28,10 @@ public class Game {
         return this.p;
     }
 
+    public String getPlayerInfo() {
+        return this.p.toString();
+    }
+
     public void setPlayer(Player p) {
         this.p = p;
     }

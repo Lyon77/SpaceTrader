@@ -48,9 +48,9 @@ public class MainActivity extends AppCompatActivity {
                     String name = username.getText().toString();
 
 
-                    if (pilot + fighter + trader + engineer == 16 && !name.equals("") && name != null) {
+                    if (pilot + fighter + trader + engineer == 16 && name != null && !name.equals("")) {
                         game.setPlayer(new Player(name, pilot, fighter, trader, engineer, text));
-                        Log.i("Player", game.getPlayer().toString());
+                        Log.i("Player", game.getPlayerInfo());
                     } else {
                         Log.e("Value", "Invalid inputs");
                     }

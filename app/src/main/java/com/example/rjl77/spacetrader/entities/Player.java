@@ -46,7 +46,7 @@ public class Player {
     //    @androidx.annotation.NonNull
     @Override
     public String toString() {
-        return "Name: " + this.name + "\n" + "Credits: " + credits + "\n" + "Ship: " + ship.toString()
+        return "\nName: " + this.name + "\n" + "Credits: " + credits + "\n" + "Ship: " + ship.toString()
                 + "\n" + "Pilot Skill: " + pilot + "\n" + "Fighter Skill: " + fighter + "\n" + "Trader Skill: "
                 + trader + "\n" + "Engineer Skill: " + engineer + "\n" + "Game Difficulty: " + _level;
     }

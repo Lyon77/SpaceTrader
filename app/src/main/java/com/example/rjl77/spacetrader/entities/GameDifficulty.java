@@ -18,6 +18,7 @@ public enum GameDifficulty implements Serializable{
         return difficulty;
     }
 
+    @Override
     public String toString() {
         return difficulty;
     }
