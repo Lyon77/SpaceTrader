@@ -1,7 +1,5 @@
 package com.example.rjl77.spacetrader.game;
 
-import android.util.Log;
-
 import com.example.rjl77.spacetrader.entities.GameDifficulty;
 import com.example.rjl77.spacetrader.entities.Player;
 import com.example.rjl77.spacetrader.entities.Universe;
