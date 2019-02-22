@@ -10,6 +10,7 @@ public class Universe {
     private HashSet<SolarSystem> system;
 
     public Universe() {
+        system = new HashSet<>();
         Random cood = new Random();
         while (system.size() < 10) {
             int x = cood.nextInt(20);
