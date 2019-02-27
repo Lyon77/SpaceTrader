@@ -8,6 +8,7 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
+import android.content.Intent;
 
 
 
@@ -47,17 +48,18 @@ public class MainActivity extends AppCompatActivity {
                     EditText username = findViewById(R.id.username_entry);
                     String name = username.getText().toString();
 
-
                     if (pilot + fighter + trader + engineer == 16 && name != null && !name.equals("")) {
                         game.setPlayer(new Player(name, pilot, fighter, trader, engineer, text));
                         Log.i("Player", game.getPlayerInfo());
+                        startActivity(new Intent(MainActivity.this, temp.class));
                     } else {
                         Log.e("Value", "Invalid inputs");
                     }
                 } catch (NumberFormatException exc) {
                     Log.e("Fail", exc.getMessage());
-
                 }
+
+
             }
         });
 

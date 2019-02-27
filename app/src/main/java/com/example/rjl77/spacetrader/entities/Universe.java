@@ -28,10 +28,21 @@ public class Universe {
             int y = cood.nextInt(15);
             String name = systemNames.get(system.size());
 
-            Log.i("Planet", "Creating SolarSystem " + name + "at " + x + " " + y);
             SolarSystem newSystem = new SolarSystem(x, y, name);
-            Log.i("Planet", newSystem.toString());
-            system.add(newSystem);
+
+            if (!system.contains(newSystem)) {
+                Log.i("Planet", "Creating SolarSystem " + name + "at " + x + " " + y);
+                Log.i("Planet", newSystem.toString());
+                system.add(newSystem);
+            }
         }
     }
+
+//    @Override
+//    public String toString() {
+//        for (int i = 0; i < system.size(); i++) {
+//
+//        }
+//    }
+
 }
