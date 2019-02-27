@@ -3,6 +3,7 @@ package com.example.rjl77.spacetrader.game;
 import com.example.rjl77.spacetrader.entities.GameDifficulty;
 import com.example.rjl77.spacetrader.entities.Player;
 import com.example.rjl77.spacetrader.entities.Universe;
+import android.util.Log;
 
 public class Game {
     private GameDifficulty level;
@@ -24,7 +25,6 @@ public class Game {
     public Game(GameDifficulty _level, Player p) {
         level = _level;
         this.p = p;
-
         universe = new Universe();
     }
 

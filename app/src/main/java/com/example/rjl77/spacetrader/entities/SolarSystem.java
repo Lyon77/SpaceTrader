@@ -76,7 +76,8 @@ public class SolarSystem {
     //@androidx.annotation.NonNull
     @Override
     public String toString() {
-        return "Planet named " + this.name + "exists at x:" + this.x + " y:" + this.y;
+        return "Planet named " + this.name + " exists at x: " + this.x + " y: " + this.y
+                + ". Its tech level is " + this.techLevel + " and its resource level is " + this.resource + ".";
     }
 
     @Override
