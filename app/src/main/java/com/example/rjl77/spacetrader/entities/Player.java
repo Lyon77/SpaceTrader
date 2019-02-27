@@ -10,10 +10,22 @@ public class Player {
     private int engineer;
     private String _level;
 
+    /**
+     *No-args constructor for Player
+     */
     public Player() {
         this("Ryan", 4, 4, 4, 4, "EASY");
     }
 
+    /**
+     *Constructor for Player
+     * @param name player's name
+     * @param pil number of pilot points
+     * @param fight number of fighter points
+     * @param trade number of trader points
+     * @param eng number of engineer points
+     * @param lev difficulty level
+     */
     public Player(String name, int pil, int fight, int trade, int eng, String lev) {
         this.name = name;
         this.pilot = pil;
@@ -25,20 +37,40 @@ public class Player {
         this._level = lev;
     }
 
+    /**
+     *Getter for name
+     *@return name attribute value
+     */
     public String getName() {
         return this.name;
     }
 
+    /**
+     *Getter for credits
+     *@return credits attribute value
+     */
     public int getCredits() {
         return this.credits;
     }
 
+    /**
+     *Getter for ship
+     *@return ship attribute value
+     */
     public Ship getShip() {
         return this.ship;
     }
 
+    /**
+     *Getter for level
+     *@return level attribute value
+     */
     public String getLevel() {return _level;};
 
+    /**
+     *Setter for level
+     *@return level attribute value
+     */
     public void set_level(String difficulty) {
         _level = difficulty;
     }
