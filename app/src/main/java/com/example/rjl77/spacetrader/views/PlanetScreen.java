@@ -5,11 +5,11 @@ import android.os.Bundle;
 
 import com.example.rjl77.spacetrader.R;
 
-public class temp extends AppCompatActivity {
+public class PlanetScreen extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_temp);
+        setContentView(R.layout.activity_planetscreen);
     }
 }

@@ -51,7 +51,7 @@ public class MainActivity extends AppCompatActivity {
                     if (pilot + fighter + trader + engineer == 16 && name != null && !name.equals("")) {
                         game.setPlayer(new Player(name, pilot, fighter, trader, engineer, text));
                         Log.i("Player", game.getPlayerInfo());
-                        startActivity(new Intent(MainActivity.this, temp.class));
+                        startActivity(new Intent(MainActivity.this, PlanetScreen.class));
                     } else {
                         Log.e("Value", "Invalid inputs");
                     }
