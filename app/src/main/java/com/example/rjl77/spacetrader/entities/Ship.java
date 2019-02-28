@@ -5,7 +5,7 @@ import java.util.HashMap;
 public class Ship {
     private String name;
     private int maxCargo;
-    private HashMap<String, int> cargo;
+    private HashMap<String, Integer> cargo;
 
     public Ship() {
         this("Gnat");
