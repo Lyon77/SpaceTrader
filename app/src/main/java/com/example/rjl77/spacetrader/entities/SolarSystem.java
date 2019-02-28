@@ -8,6 +8,7 @@ public class SolarSystem {
     private String name;
     private int techLevel;
     private int resource;
+    private Market market;
 
 
     /**
@@ -31,6 +32,8 @@ public class SolarSystem {
         } else {
             resource = 0;
         }
+
+        market = new Market(techLevel, resource);
     }
 
     /**
