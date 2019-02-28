@@ -25,7 +25,15 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        //set difficulty
+        Spinner gameDifficultySpinner = findViewById(R.id.game_difficulty_spinner);
+        ArrayAdapter<GameDifficulty> adapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_item, GameDifficulty.values());
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        gameDifficultySpinner.setAdapter(adapter);
 
+    }
+
+    public void onOkayPressed(View view) {
         game = new Game();
 
         //Gets the button to create the player
@@ -58,25 +66,16 @@ public class MainActivity extends AppCompatActivity {
                 } catch (NumberFormatException exc) {
                     Log.e("Fail", exc.getMessage());
                 }
-
-
             }
         });
 
-        //set difficulty
-        Spinner gameDifficultySpinner = findViewById(R.id.game_difficulty_spinner);
-        ArrayAdapter<GameDifficulty> adapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_item, GameDifficulty.values());
-        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        gameDifficultySpinner.setAdapter(adapter);
 
-        //button to exit the game and close the app
-        Button exit =  findViewById(R.id.button_exit);
-        exit.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                finish();
-                System.exit(0);
-            }
-        });
     }
+
+    /**
+     * Button handler for cancel - just call back pressed
+     *
+     * @param view the button pressed
+     */
+    public void onCancelPressed(View view) { onBackPressed();}
 }

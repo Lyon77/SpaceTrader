@@ -6,6 +6,18 @@
     android:layout_height="match_parent"
     tools:context=".views.MainActivity">
 
+    <Spinner
+        android:id="@+id/game_difficulty_spinner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="45dp"
+        android:layout_marginTop="350dp"
+        android:dropDownWidth="wrap_content"
+        android:maxHeight="13dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <TextView
         android:id="@+id/textView"
         android:layout_width="wrap_content"
@@ -28,18 +40,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <Spinner
-        android:id="@+id/game_difficulty_spinner"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="45dp"
-        android:layout_marginTop="350dp"
-        android:dropDownWidth="wrap_content"
-        android:maxHeight="13dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
     <Button
         android:id="@+id/button_create"
         android:layout_width="wrap_content"
@@ -47,6 +47,7 @@
         android:layout_marginStart="80dp"
         android:layout_marginLeft="80dp"
         android:layout_marginBottom="16dp"
+        android:onClick="onOkayPressed"
         android:text="Create"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
@@ -58,6 +59,7 @@
         android:layout_marginEnd="80dp"
         android:layout_marginRight="80dp"
         android:layout_marginBottom="16dp"
+        android:onClick="onCancelPressed"
         android:text="Exit"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
