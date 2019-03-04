@@ -12,11 +12,14 @@ public class Universe {
 
     private HashSet<SolarSystem> system;
 
+    //Making the class a singleton
+    private static Universe instance = new Universe();
+
+    public static Universe getInstance() { return instance; }
     /**
      *Constructor for Universe
-     *
      */
-    public Universe() {
+    private Universe() {
         system = new HashSet<>();
         Random cood = new Random();
         List<String> systemNames = new ArrayList<>(10);

@@ -26,7 +26,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        game = new Game();
+        game = Game.getInstance();
 
         //Gets the button to create the player
         Button create =  findViewById(R.id.button_create);
