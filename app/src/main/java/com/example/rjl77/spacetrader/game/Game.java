@@ -10,10 +10,15 @@ public class Game {
     private Player p;
     private Universe universe;
 
+    //making the class a singleton
+    private static Game instance = new Game();
+
+    public static Game getInstance() { return instance; }
+
     /**
      *No-args constructor for Game
      */
-    public Game() {
+    private Game() {
         this(GameDifficulty.EASY, new Player());
     }
 
@@ -22,10 +27,10 @@ public class Game {
      * @param _level enum for game difficulty
      * @param p player
      */
-    public Game(GameDifficulty _level, Player p) {
+    private Game(GameDifficulty _level, Player p) {
         level = _level;
         this.p = p;
-        universe = new Universe();
+        universe = Universe.getInstance();
     }
 
     /**
