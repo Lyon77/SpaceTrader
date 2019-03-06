@@ -1,30 +1,31 @@
 package com.example.rjl77.spacetrader.entities;
 import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.List;
 
-public enum Item implements Serializable{
-    Water("Water"),
-    Furs("Furs"),
-    Food("Food"),
-    Ore("Ore"),
-    Games("Games"),
-    Firearms("Firearms"),
-    Medicine("Medicine"),
-    Machines("Machines"),
-    Narcotics("Narcotics"),
-    Robots("Robots");
+public class Item implements Serializable {
 
-    private String item;
+    private String name;
 
-    Item(String item) {
-        this.item = item;
+    private int price;
+
+    private int cargoAmt;
+
+    public Item(String name, int price, int cargoAmt) {
+        this.name = name;
+        this.price = price;
+        this.cargoAmt = cargoAmt;
     }
 
-    public String getItem() {
-        return item;
+    public String getName() {
+        return name;
     }
 
-    @Override
-    public String toString() {
-        return item;
+    public int getPrice() {
+        return price;
+    }
+
+    public int getCargoAmt() {
+        return cargoAmt;
     }
 }

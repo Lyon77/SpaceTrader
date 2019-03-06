@@ -1,5 +1,6 @@
 package com.example.rjl77.spacetrader.entities;
 
+import java.util.HashMap;
 import java.util.Random;
 
 public class SolarSystem {
@@ -74,6 +75,10 @@ public class SolarSystem {
     */
     public int getResource() {
         return resource;
+    }
+
+    public HashMap<String, Integer> getMarket() {
+        return market.getPrices();
     }
 
     //@androidx.annotation.NonNull

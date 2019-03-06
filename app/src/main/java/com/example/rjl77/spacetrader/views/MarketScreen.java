@@ -21,11 +21,11 @@ public class MarketScreen extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_market);
 
-        //set item
-        Spinner itemSpinner = findViewById(R.id.item_spinner);
-        ArrayAdapter<Item> adapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_item, Item.values());
-        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        itemSpinner.setAdapter(adapter);
+//        //set item
+//        Spinner itemSpinner = findViewById(R.id.item_spinner);
+//        ArrayAdapter<Item> adapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_item, Item.values());
+//        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+//        itemSpinner.setAdapter(adapter);
 
     }
 
