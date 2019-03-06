@@ -57,6 +57,7 @@ public class Market {
     public Market(int techLevel, int resource) {
         this.techLevel = techLevel;
         this.resource = resource;
+        visit();
     }
 
     public void visit() {

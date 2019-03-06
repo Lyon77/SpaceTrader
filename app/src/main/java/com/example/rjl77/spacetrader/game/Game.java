@@ -1,9 +1,14 @@
 package com.example.rjl77.spacetrader.game;
 
 import com.example.rjl77.spacetrader.entities.GameDifficulty;
+import com.example.rjl77.spacetrader.entities.Market;
 import com.example.rjl77.spacetrader.entities.Player;
+import com.example.rjl77.spacetrader.entities.Ship;
+import com.example.rjl77.spacetrader.entities.SolarSystem;
 import com.example.rjl77.spacetrader.entities.Universe;
 import android.util.Log;
+
+import java.util.HashMap;
 
 public class Game {
     private GameDifficulty level;
@@ -30,7 +35,7 @@ public class Game {
     private Game(GameDifficulty _level, Player p) {
         level = _level;
         this.p = p;
-        universe = Universe.getInstance();
+        universe = new Universe();
     }
 
     /**
@@ -57,6 +62,10 @@ public class Game {
         return this.p;
     }
 
+    public Ship getPlayerShip() {
+        return p.getShip();
+    }
+
     /**
      *Method to get player information
      *@return string representation of player attributes
@@ -71,6 +80,14 @@ public class Game {
      */
     public void setPlayer(Player p) {
         this.p = p;
+    }
+
+    public HashMap<String, Integer> getCurrentSystemMarket() {
+        return universe.getCurrentSystemMarket();
+    }
+
+    public String currentPlanetName() {
+        return universe.getCurrentSystem().getName();
     }
 
 

@@ -8,382 +8,35 @@
     tools:context=".views.PlanetScreen">
 
     <EditText
-        android:id="@+id/s1"
-        android:layout_width="30dp"
+        android:id="@+id/item_num"
+        android:layout_width="50dp"
         android:layout_height="wrap_content"
         android:layout_centerVertical="true"
-        android:layout_marginLeft="340dp"
-        android:layout_marginBottom="250dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="400dp"
         android:layout_toRightOf="@id/pilot_skill_text"
-        android:elevation="1000dp"
         android:gravity="center"
-        android:inputType="number"
+        android:hint="#"
+        android:inputType="numberDecimal|numberSigned"
         android:singleLine="true"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="0.609"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.497" />
+        app:layout_constraintTop_toTopOf="parent" />
 
-    <EditText
-        android:id="@+id/b1"
-        android:layout_width="30dp"
+    <Spinner
+        android:id="@+id/item_spinner"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerVertical="true"
-        android:layout_marginLeft="20dp"
-        android:layout_marginBottom="250dp"
-        android:layout_toRightOf="@id/pilot_skill_text"
-        android:elevation="1000dp"
-        android:gravity="center"
-        android:inputType="number"
-        android:singleLine="true"
+        android:layout_marginTop="400dp"
+        android:layout_marginRight="100dp"
+        android:dropDownWidth="wrap_content"
+        android:maxHeight="13dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="0.609"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.497" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-    <EditText
-        android:id="@+id/s2"
-        android:layout_width="30dp"
-        android:layout_height="wrap_content"
-        android:layout_centerVertical="true"
-        android:layout_marginLeft="340dp"
-        android:layout_marginBottom="185dp"
-        android:layout_toRightOf="@id/pilot_skill_text"
-        android:elevation="1000dp"
-        android:gravity="center"
-        android:inputType="number"
-        android:singleLine="true"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="0.609"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.497" />
-
-    <EditText
-        android:id="@+id/b2"
-        android:layout_width="30dp"
-        android:layout_height="wrap_content"
-        android:layout_centerVertical="true"
-        android:layout_marginLeft="20dp"
-        android:layout_marginBottom="185dp"
-        android:layout_toRightOf="@id/pilot_skill_text"
-        android:elevation="1000dp"
-        android:gravity="center"
-        android:inputType="number"
-        android:singleLine="true"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="0.609"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.497" />
-
-    <EditText
-        android:id="@+id/s4"
-        android:layout_width="30dp"
-        android:layout_height="wrap_content"
-        android:layout_centerVertical="true"
-        android:layout_marginLeft="340dp"
-        android:layout_marginBottom="60dp"
-        android:layout_toRightOf="@id/pilot_skill_text"
-        android:elevation="1000dp"
-        android:gravity="center"
-        android:inputType="number"
-        android:singleLine="true"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="0.609"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.497" />
-
-    <EditText
-        android:id="@+id/b4"
-        android:layout_width="30dp"
-        android:layout_height="wrap_content"
-        android:layout_centerVertical="true"
-        android:layout_marginLeft="20dp"
-        android:layout_marginBottom="60dp"
-        android:layout_toRightOf="@id/pilot_skill_text"
-        android:elevation="1000dp"
-        android:gravity="center"
-        android:inputType="number"
-        android:singleLine="true"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="0.609"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.497" />
-
-    <EditText
-        android:id="@+id/s5"
-        android:layout_width="30dp"
-        android:layout_height="wrap_content"
-        android:layout_centerVertical="true"
-        android:layout_marginLeft="340dp"
-        android:layout_toRightOf="@id/pilot_skill_text"
-        android:elevation="1000dp"
-        android:gravity="center"
-        android:inputType="number"
-        android:singleLine="true"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="0.609"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.497" />
-
-    <EditText
-        android:id="@+id/b5"
-        android:layout_width="30dp"
-        android:layout_height="wrap_content"
-        android:layout_centerVertical="true"
-        android:layout_marginLeft="20dp"
-        android:layout_toRightOf="@id/pilot_skill_text"
-        android:elevation="1000dp"
-        android:gravity="center"
-        android:inputType="number"
-        android:singleLine="true"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="0.609"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.497" />
-
-    <EditText
-        android:id="@+id/s6"
-        android:layout_width="30dp"
-        android:layout_height="wrap_content"
-        android:layout_centerVertical="true"
-        android:layout_marginLeft="340dp"
-        android:layout_marginTop="60dp"
-        android:layout_toRightOf="@id/pilot_skill_text"
-        android:elevation="1000dp"
-        android:gravity="center"
-        android:inputType="number"
-        android:singleLine="true"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="0.609"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.497" />
-
-    <EditText
-        android:id="@+id/b6"
-        android:layout_width="30dp"
-        android:layout_height="wrap_content"
-        android:layout_centerVertical="true"
-        android:layout_marginLeft="20dp"
-        android:layout_marginTop="60dp"
-        android:layout_toRightOf="@id/pilot_skill_text"
-        android:elevation="1000dp"
-        android:gravity="center"
-        android:inputType="number"
-        android:singleLine="true"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="0.609"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.497" />
-
-    <EditText
-        android:id="@+id/s7"
-        android:layout_width="30dp"
-        android:layout_height="wrap_content"
-        android:layout_centerVertical="true"
-        android:layout_marginLeft="340dp"
-        android:layout_marginTop="120dp"
-        android:layout_toRightOf="@id/pilot_skill_text"
-        android:elevation="1000dp"
-        android:gravity="center"
-        android:inputType="number"
-        android:singleLine="true"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="0.609"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.497" />
-
-    <EditText
-        android:id="@+id/b7"
-        android:layout_width="30dp"
-        android:layout_height="wrap_content"
-        android:layout_centerVertical="true"
-        android:layout_marginLeft="20dp"
-        android:layout_marginTop="120dp"
-        android:layout_toRightOf="@id/pilot_skill_text"
-        android:elevation="1000dp"
-        android:gravity="center"
-        android:inputType="number"
-        android:singleLine="true"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="0.609"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.497" />
-
-    <EditText
-        android:id="@+id/s8"
-        android:layout_width="30dp"
-        android:layout_height="wrap_content"
-        android:layout_centerVertical="true"
-        android:layout_marginLeft="340dp"
-        android:layout_marginTop="180dp"
-        android:layout_toRightOf="@id/pilot_skill_text"
-        android:elevation="1000dp"
-        android:gravity="center"
-        android:inputType="number"
-        android:singleLine="true"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="0.609"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.497" />
-
-    <EditText
-        android:id="@+id/b8"
-        android:layout_width="30dp"
-        android:layout_height="wrap_content"
-        android:layout_centerVertical="true"
-        android:layout_marginLeft="20dp"
-        android:layout_marginTop="180dp"
-        android:layout_toRightOf="@id/pilot_skill_text"
-        android:elevation="1000dp"
-        android:gravity="center"
-        android:inputType="number"
-        android:singleLine="true"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="0.609"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.497" />
-
-    <EditText
-        android:id="@+id/s9"
-        android:layout_width="30dp"
-        android:layout_height="wrap_content"
-        android:layout_centerVertical="true"
-        android:layout_marginLeft="340dp"
-        android:layout_marginTop="240dp"
-        android:layout_toRightOf="@id/pilot_skill_text"
-        android:elevation="1000dp"
-        android:gravity="center"
-        android:inputType="number"
-        android:singleLine="true"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="0.609"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.497" />
-
-    <EditText
-        android:id="@+id/b9"
-        android:layout_width="30dp"
-        android:layout_height="wrap_content"
-        android:layout_centerVertical="true"
-        android:layout_marginLeft="20dp"
-        android:layout_marginTop="240dp"
-        android:layout_toRightOf="@id/pilot_skill_text"
-        android:elevation="1000dp"
-        android:gravity="center"
-        android:inputType="number"
-        android:singleLine="true"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="0.609"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.497" />
-
-    <EditText
-        android:id="@+id/s10"
-        android:layout_width="30dp"
-        android:layout_height="wrap_content"
-        android:layout_centerVertical="true"
-        android:layout_marginLeft="340dp"
-        android:layout_marginTop="300dp"
-        android:layout_toRightOf="@id/pilot_skill_text"
-        android:elevation="1000dp"
-        android:gravity="center"
-        android:inputType="number"
-        android:singleLine="true"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="0.609"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.497" />
-
-    <EditText
-        android:id="@+id/b10"
-        android:layout_width="30dp"
-        android:layout_height="wrap_content"
-        android:layout_centerVertical="true"
-        android:layout_marginLeft="20dp"
-        android:layout_marginTop="300dp"
-        android:layout_toRightOf="@id/pilot_skill_text"
-        android:elevation="1000dp"
-        android:gravity="center"
-        android:inputType="number"
-        android:singleLine="true"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="0.609"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.497" />
-
-    <EditText
-        android:id="@+id/s3"
-        android:layout_width="30dp"
-        android:layout_height="wrap_content"
-        android:layout_centerVertical="true"
-        android:layout_marginLeft="340dp"
-        android:layout_marginBottom="120dp"
-        android:layout_toRightOf="@id/pilot_skill_text"
-        android:elevation="1000dp"
-        android:gravity="center"
-        android:inputType="number"
-        android:singleLine="true"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="0.609"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.497" />
-
-    <EditText
-        android:id="@+id/b3"
-        android:layout_width="30dp"
-        android:layout_height="wrap_content"
-        android:layout_centerVertical="true"
-        android:layout_marginLeft="20dp"
-        android:layout_marginBottom="120dp"
-        android:layout_toRightOf="@id/pilot_skill_text"
-        android:elevation="1000dp"
-        android:gravity="center"
-        android:inputType="number"
-        android:singleLine="true"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="0.609"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.497" />
 
     <TextView
         android:id="@+id/textView5"
@@ -427,46 +80,36 @@
 
 
             <TextView
-                android:layout_width="84dp"
+                android:layout_width="108dp"
                 android:layout_marginLeft="1dp"
                 android:background="#FFF"
                 android:padding="5dp"
                 android:text="Items" />
 
             <TextView
-                android:layout_width="68dp"
+                android:layout_width="92dp"
                 android:layout_marginLeft="1dp"
                 android:background="#FFF"
                 android:padding="5dp"
                 android:text="price" />
 
             <TextView
-                android:layout_width="70dp"
+                android:layout_width="105dp"
                 android:layout_marginLeft="1dp"
                 android:background="#FFF"
                 android:padding="5dp"
                 android:text="Market" />
 
-            <TextView
-                android:layout_width="62dp"
-                android:layout_marginLeft="1dp"
-                android:background="#FFF"
-                android:padding="5dp"
-                android:text="buy" />
 
             <TextView
-                android:layout_width="61dp"
+
+                android:layout_width="128dp"
                 android:layout_marginLeft="1dp"
                 android:background="#FFF"
                 android:padding="5dp"
                 android:text="Cargo" />
 
-            <TextView
-                android:layout_width="61dp"
-                android:layout_marginLeft="1dp"
-                android:background="#FFF"
-                android:padding="5dp"
-                android:text="sell" />
+
         </TableRow>
 
         <TableRow
@@ -484,6 +127,7 @@
                 android:text="1.Water" />
 
             <TextView
+                android:id="@+id/p1"
                 android:layout_width="62dp"
                 android:layout_marginLeft="1dp"
                 android:background="#FFF"
@@ -491,18 +135,12 @@
                 android:text="p1" />
 
             <TextView
+                android:id="@+id/m1"
                 android:layout_width="50dp"
                 android:layout_marginLeft="1dp"
                 android:background="#FFF"
                 android:padding="5dp"
                 android:text="m1" />
-
-            <TextView
-                android:layout_width="62dp"
-                android:layout_marginLeft="1dp"
-                android:background="#FFF"
-                android:padding="5dp"
-                android:text="#" />
 
             <TextView
                 android:id="@+id/c1"
@@ -535,6 +173,7 @@
                 android:text="2.Furs" />
 
             <TextView
+                android:id="@+id/p2"
                 android:layout_width="62dp"
                 android:layout_marginLeft="1dp"
                 android:background="#FFF"
@@ -542,20 +181,16 @@
                 android:text="p2" />
 
             <TextView
+                android:id="@+id/m2"
                 android:layout_width="50dp"
                 android:layout_marginLeft="1dp"
                 android:background="#FFF"
                 android:padding="5dp"
                 android:text="m2" />
 
-            <TextView
-                android:layout_width="62dp"
-                android:layout_marginLeft="1dp"
-                android:background="#FFF"
-                android:padding="5dp"
-                android:text="#" />
 
             <TextView
+                android:id="@+id/c2"
                 android:layout_width="61dp"
                 android:layout_marginLeft="1dp"
                 android:background="#FFF"
@@ -585,6 +220,7 @@
                 android:text="3.Food" />
 
             <TextView
+                android:id="@+id/p3"
                 android:layout_width="62dp"
                 android:layout_marginLeft="1dp"
                 android:background="#FFF"
@@ -592,20 +228,16 @@
                 android:text="p3" />
 
             <TextView
+                android:id="@+id/m3"
                 android:layout_width="50dp"
                 android:layout_marginLeft="1dp"
                 android:background="#FFF"
                 android:padding="5dp"
                 android:text="m3" />
 
-            <TextView
-                android:layout_width="62dp"
-                android:layout_marginLeft="1dp"
-                android:background="#FFF"
-                android:padding="5dp"
-                android:text="#" />
 
             <TextView
+                android:id="@+id/c3"
                 android:layout_width="61dp"
                 android:layout_marginLeft="1dp"
                 android:background="#FFF"
@@ -635,6 +267,7 @@
                 android:text="4.Ore" />
 
             <TextView
+                android:id="@+id/p4"
                 android:layout_width="62dp"
                 android:layout_marginLeft="1dp"
                 android:background="#FFF"
@@ -642,6 +275,7 @@
                 android:text="p4" />
 
             <TextView
+                android:id="@+id/m4"
                 android:layout_width="50dp"
                 android:layout_marginLeft="1dp"
                 android:background="#FFF"
@@ -649,13 +283,7 @@
                 android:text="m4" />
 
             <TextView
-                android:layout_width="62dp"
-                android:layout_marginLeft="1dp"
-                android:background="#FFF"
-                android:padding="5dp"
-                android:text="#" />
-
-            <TextView
+                android:id="@+id/c4"
                 android:layout_width="61dp"
                 android:layout_marginLeft="1dp"
                 android:background="#FFF"
@@ -685,6 +313,7 @@
                 android:text="5.Games" />
 
             <TextView
+                android:id="@+id/p5"
                 android:layout_width="62dp"
                 android:layout_marginLeft="1dp"
                 android:background="#FFF"
@@ -692,6 +321,7 @@
                 android:text="p5" />
 
             <TextView
+                android:id="@+id/m5"
                 android:layout_width="50dp"
                 android:layout_marginLeft="1dp"
                 android:background="#FFF"
@@ -699,13 +329,7 @@
                 android:text="m5" />
 
             <TextView
-                android:layout_width="62dp"
-                android:layout_marginLeft="1dp"
-                android:background="#FFF"
-                android:padding="5dp"
-                android:text="#" />
-
-            <TextView
+                android:id="@+id/c5"
                 android:layout_width="61dp"
                 android:layout_marginLeft="1dp"
                 android:background="#FFF"
@@ -735,6 +359,7 @@
                 android:text="6.Firearms" />
 
             <TextView
+                android:id="@+id/p6"
                 android:layout_width="62dp"
                 android:layout_marginLeft="1dp"
                 android:background="#FFF"
@@ -742,6 +367,7 @@
                 android:text="p6" />
 
             <TextView
+                android:id="@+id/m6"
                 android:layout_width="50dp"
                 android:layout_marginLeft="1dp"
                 android:background="#FFF"
@@ -749,13 +375,7 @@
                 android:text="m6" />
 
             <TextView
-                android:layout_width="62dp"
-                android:layout_marginLeft="1dp"
-                android:background="#FFF"
-                android:padding="5dp"
-                android:text="#" />
-
-            <TextView
+                android:id="@+id/c6"
                 android:layout_width="61dp"
                 android:layout_marginLeft="1dp"
                 android:background="#FFF"
@@ -785,6 +405,7 @@
                 android:text="7.Medicine" />
 
             <TextView
+                android:id="@+id/p7"
                 android:layout_width="62dp"
                 android:layout_marginLeft="1dp"
                 android:background="#FFF"
@@ -792,6 +413,7 @@
                 android:text="p7" />
 
             <TextView
+                android:id="@+id/m7"
                 android:layout_width="50dp"
                 android:layout_marginLeft="1dp"
                 android:background="#FFF"
@@ -799,13 +421,7 @@
                 android:text="m7" />
 
             <TextView
-                android:layout_width="62dp"
-                android:layout_marginLeft="1dp"
-                android:background="#FFF"
-                android:padding="5dp"
-                android:text="#" />
-
-            <TextView
+                android:id="@+id/c7"
                 android:layout_width="61dp"
                 android:layout_marginLeft="1dp"
                 android:background="#FFF"
@@ -835,6 +451,7 @@
                 android:text="8.Machines" />
 
             <TextView
+                android:id="@+id/p8"
                 android:layout_width="62dp"
                 android:layout_marginLeft="1dp"
                 android:background="#FFF"
@@ -842,6 +459,7 @@
                 android:text="p8" />
 
             <TextView
+                android:id="@+id/m8"
                 android:layout_width="50dp"
                 android:layout_marginLeft="1dp"
                 android:background="#FFF"
@@ -849,13 +467,7 @@
                 android:text="m8" />
 
             <TextView
-                android:layout_width="62dp"
-                android:layout_marginLeft="1dp"
-                android:background="#FFF"
-                android:padding="5dp"
-                android:text="#" />
-
-            <TextView
+                android:id="@+id/c8"
                 android:layout_width="61dp"
                 android:layout_marginLeft="1dp"
                 android:background="#FFF"
@@ -885,6 +497,7 @@
                 android:text="9.Narcotics" />
 
             <TextView
+                android:id="@+id/p9"
                 android:layout_width="62dp"
                 android:layout_marginLeft="1dp"
                 android:background="#FFF"
@@ -892,6 +505,7 @@
                 android:text="p9" />
 
             <TextView
+                android:id="@+id/m9"
                 android:layout_width="50dp"
                 android:layout_marginLeft="1dp"
                 android:background="#FFF"
@@ -899,13 +513,7 @@
                 android:text="m9" />
 
             <TextView
-                android:layout_width="62dp"
-                android:layout_marginLeft="1dp"
-                android:background="#FFF"
-                android:padding="5dp"
-                android:text="#" />
-
-            <TextView
+                android:id="@+id/c9"
                 android:layout_width="61dp"
                 android:layout_marginLeft="1dp"
                 android:background="#FFF"
@@ -935,6 +543,7 @@
                 android:text="10.Robots" />
 
             <TextView
+                android:id="@+id/p10"
                 android:layout_width="62dp"
                 android:layout_marginLeft="1dp"
                 android:background="#FFF"
@@ -942,6 +551,7 @@
                 android:text="p10" />
 
             <TextView
+                android:id="@+id/m10"
                 android:layout_width="50dp"
                 android:layout_marginLeft="1dp"
                 android:background="#FFF"
@@ -949,13 +559,7 @@
                 android:text="m10" />
 
             <TextView
-                android:layout_width="62dp"
-                android:layout_marginLeft="1dp"
-                android:background="#FFF"
-                android:padding="5dp"
-                android:text="#" />
-
-            <TextView
+                android:id="@+id/c10"
                 android:layout_width="61dp"
                 android:layout_marginLeft="1dp"
                 android:background="#FFF"
@@ -995,7 +599,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/textView7"
+        android:id="@+id/balance"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="150dp"
@@ -1006,24 +610,12 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/button_buy"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="400dp"
-        android:layout_marginRight="100dp"
-        android:text="Buy"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <Button
         android:id="@+id/button_sell"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="100dp"
+        android:layout_marginLeft="220dp"
         android:layout_marginTop="400dp"
-        android:text="Sell"
+        android:text="buy(+)/Sell(-)"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
@@ -1034,10 +626,13 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="500dp"
+        android:onClick="onBackPressed"
         android:text="Back"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+
 
 </android.support.constraint.ConstraintLayout>

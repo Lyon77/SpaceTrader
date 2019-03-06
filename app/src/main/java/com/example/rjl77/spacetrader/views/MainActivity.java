@@ -29,7 +29,7 @@ public class MainActivity extends AppCompatActivity {
         game = Game.getInstance();
 
         //Gets the button to create the player
-        Button create =  findViewById(R.id.button_create);
+        Button create = findViewById(R.id.button_create);
         create.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
