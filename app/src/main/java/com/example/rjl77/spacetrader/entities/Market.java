@@ -64,18 +64,20 @@ public class Market {
         prices = new HashMap<>();
         Random r = new Random();
         for (TradeGood tg : TradeGood.values()) {
-            int varSign = r.nextInt(1);
-            int varActual = r.nextInt(tg.getVar());
-            if (varSign == 0) {
-                varActual *= -1;
+            if (tg.getMTLU() < techLevel) {
+                int varSign = r.nextInt(1);
+                int varActual = r.nextInt(tg.getVar());
+                if (varSign == 0) {
+                    varActual *= -1;
+                }
+                int price = tg.getBasePrice() + tg.getIPL() * (techLevel - tg.getMTLP()) + varActual;
+                if (resource == tg.getCR()) {
+                    price /= varActual;
+                } else if (resource == tg.getER()) {
+                    price *= varActual;
+                }
+                prices.put(tg.toString(), price);
             }
-            int price = tg.getBasePrice() + tg.getIPL() * (techLevel - tg.getMTLP()) + varActual;
-            if (resource == tg.getCR()) {
-                price /= varActual;
-            } else if (resource == tg.getER()) {
-                price *= varActual;
-            }
-            prices.put(tg.toString(), price);
         }
     }
 
