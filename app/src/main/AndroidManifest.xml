@@ -10,9 +10,8 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".views.PlanetScreen"></activity>
-        <activity android:name=".views.MarketScreen"></activity>
         <activity android:name=".views.PlanetScreen"></activity>
-        <activity android:name=".views.MarketTest"></activity>
+        <activity android:name=".views.MarketView"></activity>
         <activity android:name=".views.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

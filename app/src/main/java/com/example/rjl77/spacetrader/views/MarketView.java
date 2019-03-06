@@ -17,7 +17,7 @@ import com.example.rjl77.spacetrader.R;
 
 import com.example.rjl77.spacetrader.game.Game;
 
-public class MarketTest extends AppCompatActivity {
+public class MarketView extends AppCompatActivity {
 
     /** a reference to our Game */
     private Game game;

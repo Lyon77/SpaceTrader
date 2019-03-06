@@ -28,7 +28,7 @@ public class PlanetScreen extends AppCompatActivity {
         market.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(PlanetScreen.this, MarketTest.class));
+                startActivity(new Intent(PlanetScreen.this, MarketView.class));
             }
         });
     }
