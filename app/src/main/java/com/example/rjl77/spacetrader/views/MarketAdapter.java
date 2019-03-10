@@ -81,7 +81,7 @@ public class MarketAdapter extends RecyclerView.Adapter<MarketAdapter.MarketView
          */
         public MarketViewHolder(@NonNull View itemView) {
             super(itemView);
-            price = itemView.findViewById(R.id.price);
+            price = itemView.findViewById(R.id.uni);
             priceTag = itemView.findViewById(R.id.priceTag);
             cargo = itemView.findViewById(R.id.cargo);
             stock = itemView.findViewById(R.id.stock);

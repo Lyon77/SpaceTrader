@@ -1,5 +1,7 @@
 package com.example.rjl77.spacetrader.entities;
 
+import com.example.rjl77.spacetrader.game.Game;
+
 import java.util.HashMap;
 import java.util.Random;
 
@@ -9,6 +11,7 @@ public class Market {
     private int techLevel;
     private int resource;
     private HashMap<String, Integer> prices;
+
 
     public enum TradeGood {
         WATER(0, 0, 2, 30, 3, 4, 4, 3),
@@ -84,4 +87,7 @@ public class Market {
     public HashMap<String, Integer> getPrices() {
         return prices;
     }
+
+
+
 }
