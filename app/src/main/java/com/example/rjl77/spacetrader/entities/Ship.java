@@ -26,6 +26,7 @@ public class Ship {
     public boolean hasCargo(String c) {return cargo.containsKey(c);}
 
     public int cargoAmount(String c) {
+        System.out.println("Has " + c + " " + cargo.containsKey(c));
         if (cargo.containsKey(c)) {
             return cargo.get(c);
         } else {
@@ -33,22 +34,17 @@ public class Ship {
         }
     }
 
-    public boolean sellCargo(String c, int amount) {
-        //if there isn't enough cargo, return a fail
-        if (!cargo.containsKey(c) || cargo.get(c) < amount) {
-            return false;
-        }
+    public void sellCargo(String c, int amount) {
         cargo.put(c, cargo.get(c) - amount);
-
-        return true;
     }
 
     public void addCargo(String c, int amount) {
         if (cargo.containsKey(c)) {
             cargo.put(c, cargo.get(c) + amount);
-            System.out.println("temp " + cargo.get(c));
+            System.out.println("Cargo " + cargo.get(c));
         } else {
             cargo.put(c, amount);
+            System.out.println("Added " + cargo.get(c));
         }
     }
 

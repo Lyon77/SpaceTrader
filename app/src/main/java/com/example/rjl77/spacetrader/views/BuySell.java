@@ -35,6 +35,7 @@ public class BuySell extends AppCompatActivity {
     private Player p = game.getPlayer();
     private Ship ship = p.getShip();
     private Item item;
+    private String cargoName;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -54,12 +55,13 @@ public class BuySell extends AppCompatActivity {
 
 
         //buy or sell - set default data
-        item = (Item) getIntent().getSerializableExtra(MarketView.EXTRA_COURSE);
+        Bundle bundle = getIntent().getExtras();
         setTitle("Buying or Selling");
 
-        name.setText(item.getName());
-        price.setText(String.valueOf(item.getPrice()));
-        cargo.setText(String.valueOf(ship.cargoAmount(item.getName())));
+        cargoName = bundle.getString("Name");
+        name.setText(cargoName);
+        price.setText(bundle.getString("Price"));
+        cargo.setText(bundle.getString("CargoAmt"));
         balance.setText(String.valueOf(p.getCredits()));
 
         exit_button.setOnClickListener(new View.OnClickListener() {
@@ -69,8 +71,12 @@ public class BuySell extends AppCompatActivity {
             }
         });
 
-
-
+        save_button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                onSavePressed(v);
+            }
+        });
 
     }
 
@@ -83,7 +89,7 @@ public class BuySell extends AppCompatActivity {
         int buysel = Integer.parseInt(buysell.getText().toString());
         int credit = p.getCredits();
         int price_ = Integer.parseInt(price.getText().toString());
-        int amount = ship.cargoAmount(item.toString());
+        int amount = ship.cargoAmount(cargoName);
 
         name = findViewById(R.id.name);
         price = findViewById(R.id.price);
@@ -91,21 +97,20 @@ public class BuySell extends AppCompatActivity {
         balance = findViewById(R.id.balance);
 
         if (buysel < 0) {
-            if (amount + buysel > 0) {
-                p.setCredits(credit + buysel * price_);
-                ship.sellCargo(item.getName(), amount);
-                balance.setText(String.valueOf(credit + buysel * price_));
-                cargo.setText(String.valueOf(ship.cargoAmount(item.getName()) - buysel));
+            if (amount + buysel >= 0) {
+                p.setCredits(credit - buysel * price_);
+                ship.sellCargo(cargoName, Math.abs(buysel));
+                balance.setText(String.valueOf(p.getCredits()));
+                cargo.setText(String.valueOf(ship.cargoAmount(cargoName)));
             } else {
-                Log.d("Edit", "not enough of item");
+                Log.d("Edit", "not enough of items");
             }
         } else if (buysel > 0) {
-            if (credit - buysel * price_ > 0) {
+            if (credit - buysel * price_ >= 0) {
                 p.setCredits(credit - buysel * price_);
-                balance.setText(String.valueOf(credit - buysel * price_));
-                ship.addCargo(item.getName(), amount);
-                System.out.println(ship.cargoAmount(item.getName()));
-                cargo.setText(String.valueOf(ship.cargoAmount(item.getName()) + buysel));
+                balance.setText(String.valueOf(p.getCredits()));
+                ship.addCargo(cargoName, buysel);
+                cargo.setText(String.valueOf(ship.cargoAmount(cargoName)));
             } else {
                 Log.d("Edit", "not enough money");
             }

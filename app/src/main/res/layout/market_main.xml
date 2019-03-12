@@ -37,4 +37,10 @@
         android:layout_marginLeft="170dp"
         android:text="Market"
         android:textSize="24sp" />
+
+    <Button
+        android:id="@+id/leave"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Leave" />
 </android.support.design.widget.CoordinatorLayout>
