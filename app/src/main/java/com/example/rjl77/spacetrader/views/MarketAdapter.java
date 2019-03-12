@@ -15,6 +15,8 @@ import java.util.Map;
 import com.example.rjl77.spacetrader.R;
 import com.example.rjl77.spacetrader.entities.Item;
 import com.example.rjl77.spacetrader.entities.Ship;
+import com.example.rjl77.spacetrader.game.Game;
+
 
 public class MarketAdapter extends RecyclerView.Adapter<MarketAdapter.MarketViewHolder> {
 
@@ -37,8 +39,11 @@ public class MarketAdapter extends RecyclerView.Adapter<MarketAdapter.MarketView
 
         Item item = itemList.get(position);
 
+        Game game = Game.getInstance();
+        Ship ship = game.getPlayerShip();
+
         holder.priceTag.setText(Integer.toString(item.getPrice()));
-        holder.stock.setText(Integer.toString(item.getCargoAmt()));
+        holder.stock.setText(Integer.toString(ship.cargoAmount(item.getName())));
         holder.tradeGood.setText(item.getName());
 
 

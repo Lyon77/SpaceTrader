@@ -59,8 +59,17 @@ public class BuySell extends AppCompatActivity {
 
         name.setText(item.getName());
         price.setText(String.valueOf(item.getPrice()));
-        cargo.setText(String.valueOf(item.getCargoAmt()));
+        cargo.setText(String.valueOf(ship.cargoAmount(item.getName())));
         balance.setText(String.valueOf(p.getCredits()));
+
+        exit_button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(BuySell.this, MarketView.class));
+            }
+        });
+
+
 
 
     }
@@ -74,20 +83,29 @@ public class BuySell extends AppCompatActivity {
         int buysel = Integer.parseInt(buysell.getText().toString());
         int credit = p.getCredits();
         int price_ = Integer.parseInt(price.getText().toString());
-        int amount = item.getCargoAmt();
+        int amount = ship.cargoAmount(item.toString());
+
+        name = findViewById(R.id.name);
+        price = findViewById(R.id.price);
+        cargo = findViewById(R.id.cargo);
+        balance = findViewById(R.id.balance);
 
         if (buysel < 0) {
             if (amount + buysel > 0) {
                 p.setCredits(credit + buysel * price_);
                 ship.sellCargo(item.getName(), amount);
-                startActivity(new Intent(BuySell.this, MarketView.class));
+                balance.setText(String.valueOf(credit + buysel * price_));
+                cargo.setText(String.valueOf(ship.cargoAmount(item.getName()) - buysel));
             } else {
                 Log.d("Edit", "not enough of item");
             }
         } else if (buysel > 0) {
             if (credit - buysel * price_ > 0) {
                 p.setCredits(credit - buysel * price_);
+                balance.setText(String.valueOf(credit - buysel * price_));
                 ship.addCargo(item.getName(), amount);
+                System.out.println(ship.cargoAmount(item.getName()));
+                cargo.setText(String.valueOf(ship.cargoAmount(item.getName()) + buysel));
             } else {
                 Log.d("Edit", "not enough money");
             }
@@ -97,6 +115,8 @@ public class BuySell extends AppCompatActivity {
 
 
     }
+
+
 
 }
 
