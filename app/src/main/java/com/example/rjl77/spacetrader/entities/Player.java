@@ -53,6 +53,8 @@ public class Player {
         return this.credits;
     }
 
+    public void setCredits(int cred) { credits = cred; }
+
     /**
      *Getter for ship
      *@return ship attribute value

@@ -28,4 +28,6 @@ public class Item implements Serializable {
     public int getCargoAmt() {
         return cargoAmt;
     }
+
+    public void setCargoAmt(int amount) { cargoAmt = amount; }
 }

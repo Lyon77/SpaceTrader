@@ -50,7 +50,7 @@ public class MarketView extends AppCompatActivity {
         /*get balance
          */
         balance = findViewById(R.id.balance);
-        balance.setText(String.valueOf(BuySell.getRemain()));
+        balance.setText(String.valueOf(game.getPlayer().getCredits()));
 
 
         /*

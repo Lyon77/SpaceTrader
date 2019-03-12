@@ -15,6 +15,8 @@ import android.widget.TextView;
 import com.example.rjl77.spacetrader.R;
 import com.example.rjl77.spacetrader.entities.Item;
 import com.example.rjl77.spacetrader.entities.Player;
+import com.example.rjl77.spacetrader.entities.Ship;
+import com.example.rjl77.spacetrader.game.Game;
 
 
 public class BuySell extends AppCompatActivity {
@@ -29,7 +31,9 @@ public class BuySell extends AppCompatActivity {
     private EditText buysell;
     private Button save_button;
     private Button exit_button;
-    public static int credit = 1000;
+    private Game game = Game.getInstance();
+    private Player p = game.getPlayer();
+    private Ship ship = p.getShip();
     private Item item;
 
     @Override
@@ -53,11 +57,10 @@ public class BuySell extends AppCompatActivity {
         item = (Item) getIntent().getSerializableExtra(MarketView.EXTRA_COURSE);
         setTitle("Buying or Selling");
 
-
         name.setText(item.getName());
         price.setText(String.valueOf(item.getPrice()));
         cargo.setText(String.valueOf(item.getCargoAmt()));
-        balance.setText(String.valueOf(credit));
+        balance.setText(String.valueOf(p.getCredits()));
 
 
     }
@@ -69,22 +72,31 @@ public class BuySell extends AppCompatActivity {
      */
     public void onSavePressed(View view) {
         int buysel = Integer.parseInt(buysell.getText().toString());
-        credit = Integer.parseInt(balance.getText().toString());
+        int credit = p.getCredits();
         int price_ = Integer.parseInt(price.getText().toString());
-        if ((credit-(price_*buysel))<0) {
-            Log.d("Edit", "not enough balance");
-        } else {
-            credit = credit-(price_*buysel);
-            balance.setText(String.valueOf(credit));
+        int amount = item.getCargoAmt();
 
+        if (buysel < 0) {
+            if (amount + buysel > 0) {
+                p.setCredits(credit + buysel * price_);
+                ship.sellCargo(item.getName(), amount);
+                startActivity(new Intent(BuySell.this, MarketView.class));
+            } else {
+                Log.d("Edit", "not enough of item");
+            }
+        } else if (buysel > 0) {
+            if (credit - buysel * price_ > 0) {
+                p.setCredits(credit - buysel * price_);
+                ship.addCargo(item.getName(), amount);
+            } else {
+                Log.d("Edit", "not enough money");
+            }
+        } else {
+            Log.d("Edit", "set nonzero buy/sell");
         }
 
+
     }
-
-
-
-
-    public static int getRemain(){return credit;};
 
 }
 
