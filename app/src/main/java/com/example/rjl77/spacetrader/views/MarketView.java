@@ -35,15 +35,6 @@ public class MarketView extends AppCompatActivity {
     /** make an adapter for the list of courses */
     private MarketAdapter adapter;
 
-//    /** an integer used because add a course returns something */
-//    public static final int ADD_COURSE_REQUEST_ID = 1;
-
-//    /** an int for the request code */
-//    private static final int EDIT_REQUEST = 5;
-//
-//    /** a string key for passing the course in a map */
-//    public static final String EXTRA_COURSE = "edu.gatech.cs2340.lab3newcomponents.views.EXTRA_COURSE";
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
