@@ -67,7 +67,7 @@ public class Market {
         prices = new HashMap<>();
         Random r = new Random();
         for (TradeGood tg : TradeGood.values()) {
-            if (tg.getMTLU() < techLevel) {
+            if (tg.getMTLU() <= techLevel) {
                 int varSign = r.nextInt(1);
                 int varActual = r.nextInt(tg.getVar());
                 if (varSign == 0) {
