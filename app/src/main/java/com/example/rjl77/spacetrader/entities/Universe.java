@@ -13,6 +13,7 @@ public class Universe {
 
     private HashSet<SolarSystem> system;
     private SolarSystem currentSystem;
+    private List<String> systemNames;
 
     /**
      *Constructor for Universe
@@ -20,7 +21,6 @@ public class Universe {
     public Universe() {
         system = new HashSet<>();
         Random cood = new Random();
-        List<String> systemNames = new ArrayList<>(10);
         systemNames.addAll(Arrays.asList("Bretel", "Guinifer", "Rubicum", "Iodine", "Laertes",
                 "Omphalos", "Tantalos", "Xerxes", "RIP Kishan", "Exo"));
 
@@ -44,9 +44,19 @@ public class Universe {
         return currentSystem;
     }
 
+    public void setCurrentSystem(String systemName) {
+        for (SolarSystem ss : system) {
+            if (ss.getName() ==systemName)
+                currentSystem = ss;
+                return;
+            }
+    }
+
     public HashMap<String, Integer> getCurrentSystemMarket() {
         return currentSystem.getMarket();
     }
+
+    public List<String> getSystemNames() {return systemNames;}
 
     //    @Override
 //    public String toString() {
