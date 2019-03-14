@@ -1,0 +1,638 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    tools:context=".views.PlanetScreen">
+
+    <EditText
+        android:id="@+id/item_num"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="400dp"
+        android:layout_toRightOf="@id/pilot_skill_text"
+        android:gravity="center"
+        android:hint="#"
+        android:inputType="numberDecimal|numberSigned"
+        android:singleLine="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Spinner
+        android:id="@+id/item_spinner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="400dp"
+        android:layout_marginRight="100dp"
+        android:dropDownWidth="wrap_content"
+        android:maxHeight="13dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="18dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginBottom="380dp"
+        android:text="remaining cargo space:"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/space"
+        android:layout_width="wrap_content"
+        android:layout_height="18dp"
+        android:layout_marginLeft="180dp"
+        android:layout_marginBottom="380dp"
+        android:text="10"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TableLayout
+        android:id="@+id/tlTable01"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="#CCC"
+        android:paddingTop="1dp"
+        android:stretchColumns="1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TableRow
+            android:background="#CCC"
+            android:gravity="left"
+            android:paddingRight="1dp"
+            android:paddingBottom="1dp">
+
+
+            <TextView
+                android:layout_width="108dp"
+                android:layout_marginLeft="1dp"
+                android:background="#FFF"
+                android:padding="5dp"
+                android:text="Items" />
+
+            <TextView
+                android:layout_width="92dp"
+                android:layout_marginLeft="1dp"
+                android:background="#FFF"
+                android:padding="5dp"
+                android:text="price" />
+
+            <TextView
+                android:layout_width="105dp"
+                android:layout_marginLeft="1dp"
+                android:background="#FFF"
+                android:padding="5dp"
+                android:text="Market" />
+
+
+            <TextView
+
+                android:layout_width="128dp"
+                android:layout_marginLeft="1dp"
+                android:background="#FFF"
+                android:padding="5dp"
+                android:text="Cargo" />
+
+
+        </TableRow>
+
+        <TableRow
+            android:background="#CCC"
+            android:gravity="left"
+            android:paddingRight="1dp"
+            android:paddingBottom="1dp">
+
+
+            <TextView
+                android:layout_width="84dp"
+                android:layout_marginLeft="1dp"
+                android:background="#FFF"
+                android:padding="5dp"
+                android:text="1.Water" />
+
+            <TextView
+                android:id="@+id/p1"
+                android:layout_width="62dp"
+                android:layout_marginLeft="1dp"
+                android:background="#FFF"
+                android:padding="5dp"
+                android:text="p1" />
+
+            <TextView
+                android:id="@+id/m1"
+                android:layout_width="50dp"
+                android:layout_marginLeft="1dp"
+                android:background="#FFF"
+                android:padding="5dp"
+                android:text="m1" />
+
+            <TextView
+                android:id="@+id/c1"
+                android:layout_width="61dp"
+                android:layout_marginLeft="1dp"
+                android:background="#FFF"
+                android:padding="5dp"
+                android:text="c1" />
+
+            <TextView
+                android:layout_width="61dp"
+                android:layout_marginLeft="1dp"
+                android:background="#FFF"
+                android:padding="5dp"
+                android:text="#" />
+        </TableRow>
+
+        <TableRow
+            android:background="#CCC"
+            android:gravity="left"
+            android:paddingRight="1dp"
+            android:paddingBottom="1dp">
+
+
+            <TextView
+                android:layout_width="84dp"
+                android:layout_marginLeft="1dp"
+                android:background="#FFF"
+                android:padding="5dp"
+                android:text="2.Furs" />
+
+            <TextView
+                android:id="@+id/p2"
+                android:layout_width="62dp"
+                android:layout_marginLeft="1dp"
+                android:background="#FFF"
+                android:padding="5dp"
+                android:text="p2" />
+
+            <TextView
+                android:id="@+id/m2"
+                android:layout_width="50dp"
+                android:layout_marginLeft="1dp"
+                android:background="#FFF"
+                android:padding="5dp"
+                android:text="m2" />
+
+
+            <TextView
+                android:id="@+id/c2"
+                android:layout_width="61dp"
+                android:layout_marginLeft="1dp"
+                android:background="#FFF"
+                android:padding="5dp"
+                android:text="c2" />
+
+            <TextView
+                android:layout_width="61dp"
+                android:layout_marginLeft="1dp"
+                android:background="#FFF"
+                android:padding="5dp"
+                android:text="#" />
+        </TableRow>
+
+        <TableRow
+            android:background="#CCC"
+            android:gravity="left"
+            android:paddingRight="1dp"
+            android:paddingBottom="1dp">
+
+
+            <TextView
+                android:layout_width="84dp"
+                android:layout_marginLeft="1dp"
+                android:background="#FFF"
+                android:padding="5dp"
+                android:text="3.Food" />
+
+            <TextView
+                android:id="@+id/p3"
+                android:layout_width="62dp"
+                android:layout_marginLeft="1dp"
+                android:background="#FFF"
+                android:padding="5dp"
+                android:text="p3" />
+
+            <TextView
+                android:id="@+id/m3"
+                android:layout_width="50dp"
+                android:layout_marginLeft="1dp"
+                android:background="#FFF"
+                android:padding="5dp"
+                android:text="m3" />
+
+
+            <TextView
+                android:id="@+id/c3"
+                android:layout_width="61dp"
+                android:layout_marginLeft="1dp"
+                android:background="#FFF"
+                android:padding="5dp"
+                android:text="c3" />
+
+            <TextView
+                android:layout_width="61dp"
+                android:layout_marginLeft="1dp"
+                android:background="#FFF"
+                android:padding="5dp"
+                android:text="#" />
+        </TableRow>
+
+        <TableRow
+            android:background="#CCC"
+            android:gravity="left"
+            android:paddingRight="1dp"
+            android:paddingBottom="1dp">
+
+
+            <TextView
+                android:layout_width="84dp"
+                android:layout_marginLeft="1dp"
+                android:background="#FFF"
+                android:padding="5dp"
+                android:text="4.Ore" />
+
+            <TextView
+                android:id="@+id/p4"
+                android:layout_width="62dp"
+                android:layout_marginLeft="1dp"
+                android:background="#FFF"
+                android:padding="5dp"
+                android:text="p4" />
+
+            <TextView
+                android:id="@+id/m4"
+                android:layout_width="50dp"
+                android:layout_marginLeft="1dp"
+                android:background="#FFF"
+                android:padding="5dp"
+                android:text="m4" />
+
+            <TextView
+                android:id="@+id/c4"
+                android:layout_width="61dp"
+                android:layout_marginLeft="1dp"
+                android:background="#FFF"
+                android:padding="5dp"
+                android:text="c4" />
+
+            <TextView
+                android:layout_width="61dp"
+                android:layout_marginLeft="1dp"
+                android:background="#FFF"
+                android:padding="5dp"
+                android:text="#" />
+        </TableRow>
+
+        <TableRow
+            android:background="#CCC"
+            android:gravity="left"
+            android:paddingRight="1dp"
+            android:paddingBottom="1dp">
+
+
+            <TextView
+                android:layout_width="84dp"
+                android:layout_marginLeft="1dp"
+                android:background="#FFF"
+                android:padding="5dp"
+                android:text="5.Games" />
+
+            <TextView
+                android:id="@+id/p5"
+                android:layout_width="62dp"
+                android:layout_marginLeft="1dp"
+                android:background="#FFF"
+                android:padding="5dp"
+                android:text="p5" />
+
+            <TextView
+                android:id="@+id/m5"
+                android:layout_width="50dp"
+                android:layout_marginLeft="1dp"
+                android:background="#FFF"
+                android:padding="5dp"
+                android:text="m5" />
+
+            <TextView
+                android:id="@+id/c5"
+                android:layout_width="61dp"
+                android:layout_marginLeft="1dp"
+                android:background="#FFF"
+                android:padding="5dp"
+                android:text="c5" />
+
+            <TextView
+                android:layout_width="61dp"
+                android:layout_marginLeft="1dp"
+                android:background="#FFF"
+                android:padding="5dp"
+                android:text="#" />
+        </TableRow>
+
+        <TableRow
+            android:background="#CCC"
+            android:gravity="left"
+            android:paddingRight="1dp"
+            android:paddingBottom="1dp">
+
+
+            <TextView
+                android:layout_width="84dp"
+                android:layout_marginLeft="1dp"
+                android:background="#FFF"
+                android:padding="5dp"
+                android:text="6.Firearms" />
+
+            <TextView
+                android:id="@+id/p6"
+                android:layout_width="62dp"
+                android:layout_marginLeft="1dp"
+                android:background="#FFF"
+                android:padding="5dp"
+                android:text="p6" />
+
+            <TextView
+                android:id="@+id/m6"
+                android:layout_width="50dp"
+                android:layout_marginLeft="1dp"
+                android:background="#FFF"
+                android:padding="5dp"
+                android:text="m6" />
+
+            <TextView
+                android:id="@+id/c6"
+                android:layout_width="61dp"
+                android:layout_marginLeft="1dp"
+                android:background="#FFF"
+                android:padding="5dp"
+                android:text="c6" />
+
+            <TextView
+                android:layout_width="61dp"
+                android:layout_marginLeft="1dp"
+                android:background="#FFF"
+                android:padding="5dp"
+                android:text="#" />
+        </TableRow>
+
+        <TableRow
+            android:background="#CCC"
+            android:gravity="left"
+            android:paddingRight="1dp"
+            android:paddingBottom="1dp">
+
+
+            <TextView
+                android:layout_width="84dp"
+                android:layout_marginLeft="1dp"
+                android:background="#FFF"
+                android:padding="5dp"
+                android:text="7.Medicine" />
+
+            <TextView
+                android:id="@+id/p7"
+                android:layout_width="62dp"
+                android:layout_marginLeft="1dp"
+                android:background="#FFF"
+                android:padding="5dp"
+                android:text="p7" />
+
+            <TextView
+                android:id="@+id/m7"
+                android:layout_width="50dp"
+                android:layout_marginLeft="1dp"
+                android:background="#FFF"
+                android:padding="5dp"
+                android:text="m7" />
+
+            <TextView
+                android:id="@+id/c7"
+                android:layout_width="61dp"
+                android:layout_marginLeft="1dp"
+                android:background="#FFF"
+                android:padding="5dp"
+                android:text="c7" />
+
+            <TextView
+                android:layout_width="61dp"
+                android:layout_marginLeft="1dp"
+                android:background="#FFF"
+                android:padding="5dp"
+                android:text="#" />
+        </TableRow>
+
+        <TableRow
+            android:background="#CCC"
+            android:gravity="left"
+            android:paddingRight="1dp"
+            android:paddingBottom="1dp">
+
+
+            <TextView
+                android:layout_width="84dp"
+                android:layout_marginLeft="1dp"
+                android:background="#FFF"
+                android:padding="5dp"
+                android:text="8.Machines" />
+
+            <TextView
+                android:id="@+id/p8"
+                android:layout_width="62dp"
+                android:layout_marginLeft="1dp"
+                android:background="#FFF"
+                android:padding="5dp"
+                android:text="p8" />
+
+            <TextView
+                android:id="@+id/m8"
+                android:layout_width="50dp"
+                android:layout_marginLeft="1dp"
+                android:background="#FFF"
+                android:padding="5dp"
+                android:text="m8" />
+
+            <TextView
+                android:id="@+id/c8"
+                android:layout_width="61dp"
+                android:layout_marginLeft="1dp"
+                android:background="#FFF"
+                android:padding="5dp"
+                android:text="c8" />
+
+            <TextView
+                android:layout_width="61dp"
+                android:layout_marginLeft="1dp"
+                android:background="#FFF"
+                android:padding="5dp"
+                android:text="#" />
+        </TableRow>
+
+        <TableRow
+            android:background="#CCC"
+            android:gravity="left"
+            android:paddingRight="1dp"
+            android:paddingBottom="1dp">
+
+
+            <TextView
+                android:layout_width="84dp"
+                android:layout_marginLeft="1dp"
+                android:background="#FFF"
+                android:padding="5dp"
+                android:text="9.Narcotics" />
+
+            <TextView
+                android:id="@+id/p9"
+                android:layout_width="62dp"
+                android:layout_marginLeft="1dp"
+                android:background="#FFF"
+                android:padding="5dp"
+                android:text="p9" />
+
+            <TextView
+                android:id="@+id/m9"
+                android:layout_width="50dp"
+                android:layout_marginLeft="1dp"
+                android:background="#FFF"
+                android:padding="5dp"
+                android:text="m9" />
+
+            <TextView
+                android:id="@+id/c9"
+                android:layout_width="61dp"
+                android:layout_marginLeft="1dp"
+                android:background="#FFF"
+                android:padding="5dp"
+                android:text="c9" />
+
+            <TextView
+                android:layout_width="61dp"
+                android:layout_marginLeft="1dp"
+                android:background="#FFF"
+                android:padding="5dp"
+                android:text="#" />
+        </TableRow>
+
+        <TableRow
+            android:background="#CCC"
+            android:gravity="left"
+            android:paddingRight="1dp"
+            android:paddingBottom="1dp">
+
+
+            <TextView
+                android:layout_width="84dp"
+                android:layout_marginLeft="1dp"
+                android:background="#FFF"
+                android:padding="5dp"
+                android:text="10.Robots" />
+
+            <TextView
+                android:id="@+id/p10"
+                android:layout_width="62dp"
+                android:layout_marginLeft="1dp"
+                android:background="#FFF"
+                android:padding="5dp"
+                android:text="p10" />
+
+            <TextView
+                android:id="@+id/m10"
+                android:layout_width="50dp"
+                android:layout_marginLeft="1dp"
+                android:background="#FFF"
+                android:padding="5dp"
+                android:text="m10" />
+
+            <TextView
+                android:id="@+id/c10"
+                android:layout_width="61dp"
+                android:layout_marginLeft="1dp"
+                android:background="#FFF"
+                android:padding="5dp"
+                android:text="c10" />
+
+            <TextView
+                android:layout_width="61dp"
+                android:layout_marginLeft="1dp"
+                android:background="#FFF"
+                android:padding="5dp"
+                android:text="#" />
+        </TableRow>
+    </TableLayout>
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="500dp"
+        android:text="Market"
+        android:textSize="50sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginBottom="420dp"
+        android:text="remaining balance:"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/balance"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="150dp"
+        android:layout_marginBottom="420dp"
+        android:text="10000"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/button_sell"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="220dp"
+        android:layout_marginTop="400dp"
+        android:text="buy(+)/Sell(-)"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/button_back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="500dp"
+        android:onClick="onBackPressed"
+        android:text="Back"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+
+</android.support.constraint.ConstraintLayout>

@@ -1,19 +1,29 @@
 package com.example.rjl77.spacetrader.game;
 
 import com.example.rjl77.spacetrader.entities.GameDifficulty;
+import com.example.rjl77.spacetrader.entities.Market;
 import com.example.rjl77.spacetrader.entities.Player;
+import com.example.rjl77.spacetrader.entities.Ship;
+import com.example.rjl77.spacetrader.entities.SolarSystem;
 import com.example.rjl77.spacetrader.entities.Universe;
 import android.util.Log;
+
+import java.util.HashMap;
 
 public class Game {
     private GameDifficulty level;
     private Player p;
     private Universe universe;
 
+    //making the class a singleton
+    private static Game instance = new Game();
+
+    public static Game getInstance() { return instance; }
+
     /**
      *No-args constructor for Game
      */
-    public Game() {
+    private Game() {
         this(GameDifficulty.EASY, new Player());
     }
 
@@ -22,7 +32,7 @@ public class Game {
      * @param _level enum for game difficulty
      * @param p player
      */
-    public Game(GameDifficulty _level, Player p) {
+    private Game(GameDifficulty _level, Player p) {
         level = _level;
         this.p = p;
         universe = new Universe();
@@ -52,6 +62,10 @@ public class Game {
         return this.p;
     }
 
+    public Ship getPlayerShip() {
+        return p.getShip();
+    }
+
     /**
      *Method to get player information
      *@return string representation of player attributes
@@ -66,6 +80,14 @@ public class Game {
      */
     public void setPlayer(Player p) {
         this.p = p;
+    }
+
+    public HashMap<String, Integer> getCurrentSystemMarket() {
+        return universe.getCurrentSystemMarket();
+    }
+
+    public String currentPlanetName() {
+        return universe.getCurrentSystem().getName();
     }
 
 

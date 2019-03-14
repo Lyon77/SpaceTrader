@@ -26,10 +26,10 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        game = new Game();
+        game = Game.getInstance();
 
         //Gets the button to create the player
-        Button create =  findViewById(R.id.button_create);
+        Button create = findViewById(R.id.button_create);
         create.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -51,7 +51,7 @@ public class MainActivity extends AppCompatActivity {
                     if (pilot + fighter + trader + engineer == 16 && name != null && !name.equals("")) {
                         game.setPlayer(new Player(name, pilot, fighter, trader, engineer, text));
                         Log.i("Player", game.getPlayerInfo());
-                        startActivity(new Intent(MainActivity.this, temp.class));
+                        startActivity(new Intent(MainActivity.this, PlanetScreen.class));
                     } else {
                         Log.e("Value", "Invalid inputs");
                     }

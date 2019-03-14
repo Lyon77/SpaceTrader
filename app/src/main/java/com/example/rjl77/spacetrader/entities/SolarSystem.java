@@ -1,5 +1,6 @@
 package com.example.rjl77.spacetrader.entities;
 
+import java.util.HashMap;
 import java.util.Random;
 
 public class SolarSystem {
@@ -8,6 +9,7 @@ public class SolarSystem {
     private String name;
     private int techLevel;
     private int resource;
+    private Market market;
 
 
     /**
@@ -31,6 +33,8 @@ public class SolarSystem {
         } else {
             resource = 0;
         }
+
+        market = new Market(techLevel, resource);
     }
 
     /**
@@ -71,6 +75,10 @@ public class SolarSystem {
     */
     public int getResource() {
         return resource;
+    }
+
+    public HashMap<String, Integer> getMarket() {
+        return market.getPrices();
     }
 
     //@androidx.annotation.NonNull
