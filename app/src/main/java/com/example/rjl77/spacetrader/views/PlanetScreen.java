@@ -24,11 +24,28 @@ public class PlanetScreen extends AppCompatActivity {
         TextView name = findViewById(R.id.planetName);
         name.setText(game.currentPlanetName());
 
-        Button market =  findViewById(R.id.market);
+        Button market =  findViewById(R.id.button_market);
         market.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(PlanetScreen.this, MarketView.class));
+            }
+        });
+
+        Button travel =  findViewById(R.id.button_travel);
+        travel.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(PlanetScreen.this, Travel.class));
+            }
+        });
+
+        Button exit =  findViewById(R.id.button_exit);
+        exit.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                finish();
+                System.exit(0);
             }
         });
     }

@@ -9,10 +9,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".views.PlanetScreen"></activity>
-        <activity android:name=".views.BuySell"></activity>
-        <activity android:name=".views.MarketView"></activity>
-        <activity android:name=".views.MainActivity">
+        <activity android:name=".views.PlanetScreen" android:noHistory="true"></activity>
+        <activity android:name=".views.BuySell" android:noHistory="true"></activity>
+        <activity android:name=".views.MarketView" android:noHistory="true"></activity>
+        <activity android:name=".views.Travel" android:noHistory="true"></activity>
+        <activity android:name=".views.MainActivity" android:noHistory="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

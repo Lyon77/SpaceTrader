@@ -40,9 +40,12 @@ public class Travel extends AppCompatActivity {
                 String text = mySpinner.getSelectedItem().toString();
 
 
-                game.getUniverse().setCurrentSystem(text);
-                Log.i("Planet", game.currentPlanetName());
-                startActivity(new Intent(Travel.this, PlanetScreen.class));
+                if (game.getUniverse().setCurrentSystem(text)){
+                    Log.i("Planet", game.currentPlanetName());
+                    startActivity(new Intent(Travel.this, PlanetScreen.class));
+                } else {
+                    Log.i("Planet", "Failed Travel");
+                }
             }
 
         });

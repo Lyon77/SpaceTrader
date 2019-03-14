@@ -70,7 +70,7 @@ public class MainActivity extends AppCompatActivity {
         gameDifficultySpinner.setAdapter(adapter);
 
         //button to exit the game and close the app
-        Button exit =  findViewById(R.id.button_exit);
+        final Button exit =  findViewById(R.id.button_exit);
         exit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

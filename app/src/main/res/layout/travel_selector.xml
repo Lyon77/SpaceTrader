@@ -1,54 +1,55 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.constraint.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    app:layout_constraintRight_toRightOf="parent"
+    tools:context=".views.Travel">
 
     <TextView
         android:id="@+id/select_planet_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_constraintVertical_bias="0.097"
-        android:layout_constraintBottom_toBottomOf="parent"
-        android:layout_constraintLeft_toLeftOf="parent"
-        android:layout_constraintRight_toRightOf="parent"
-        android:layout_constraintTop_toTopOf="parent"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
         android:text="Select Planet"
         android:textSize="24sp"
-        tools:layout_editor_absoluteX="136dp"
-        tools:layout_editor_absoluteY="88dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Spinner
         android:id="@+id/planet_spinner"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_constraintEnd_toEndOf="parent"
-        android:layout_constraintStart_toStartOf="parent"
-        android:layout_constraintTop_toTopOf="parent"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
         android:dropDownWidth="wrap_content"
         android:maxHeight="13dp"
-        tools:layout_editor_absoluteX="181dp"
-        tools:layout_editor_absoluteY="176dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/select_planet_text" />
 
     <Button
         android:id="@+id/button_travel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_constraintBottom_toBottomOf="parent"
-        android:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="128dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
         android:text="Travel"
-        tools:layout_editor_absoluteX="161dp"
-        tools:layout_editor_absoluteY="470dp" />
-
-    <Button
-        android:id="@+id/button_leave_travel"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_constraintBottom_toBottomOf="parent"
-        android:layout_constraintEnd_toEndOf="parent"
-        android:text="Leave"
-        tools:layout_editor_absoluteX="161dp"
-        tools:layout_editor_absoluteY="602dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/planet_spinner" />
 
 </android.support.constraint.ConstraintLayout>

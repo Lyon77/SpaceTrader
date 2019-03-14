@@ -21,7 +21,7 @@ public class Universe {
     public Universe() {
         system = new HashSet<>();
         Random cood = new Random();
-        systemNames.addAll(Arrays.asList("Bretel", "Guinifer", "Rubicum", "Iodine", "Laertes",
+        systemNames = new ArrayList<>(Arrays.asList("Bretel", "Guinifer", "Rubicum", "Iodine", "Laertes",
                 "Omphalos", "Tantalos", "Xerxes", "RIP Kishan", "Exo"));
 
         while (system.size() < 10) {
@@ -44,12 +44,18 @@ public class Universe {
         return currentSystem;
     }
 
-    public void setCurrentSystem(String systemName) {
+    public boolean setCurrentSystem(String systemName) {
+        if (systemName.equals(currentSystem.getName())){
+            return false;
+        }
         for (SolarSystem ss : system) {
-            if (ss.getName() ==systemName)
+            if (ss.getName().equals(systemName)){
                 currentSystem = ss;
-                return;
+                return true;
             }
+        }
+        Log.i("Planet", "Something with the Spinner Failed");
+        return false;
     }
 
     public HashMap<String, Integer> getCurrentSystemMarket() {
@@ -57,12 +63,5 @@ public class Universe {
     }
 
     public List<String> getSystemNames() {return systemNames;}
-
-    //    @Override
-//    public String toString() {
-//        for (int i = 0; i < system.size(); i++) {
-//
-//        }
-//    }
 
 }
