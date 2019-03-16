@@ -6,6 +6,7 @@ public class Ship {
     private String name;
     private int maxCargo;
     private HashMap<String, Integer> cargo;
+    private int fuel;
 
     public Ship() {
         this("Gnat");
@@ -14,7 +15,8 @@ public class Ship {
     public Ship(String name) {
         this.name = name;
         this.maxCargo = 15;
-        cargo = new HashMap<>();
+        this.cargo = new HashMap<>();
+        this.fuel = 14;
     }
 
     public String getName() {
@@ -48,7 +50,15 @@ public class Ship {
         }
     }
 
-//    @androidx.annotation.NonNull
+    public int getFuel() {
+        return fuel;
+    }
+
+    public void setFuel(int fuel) {
+        this.fuel = fuel;
+    }
+
+    //    @androidx.annotation.NonNull
     @Override
     public String toString() {
         return this.name;

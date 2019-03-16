@@ -8,7 +8,7 @@ import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.Spinner;
-
+import android.widget.TextView;
 
 
 import com.example.rjl77.spacetrader.game.Game;
@@ -31,6 +31,9 @@ public class Travel extends AppCompatActivity {
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         planetSpinner.setAdapter(adapter);
 
+        TextView fuel = findViewById(R.id.fuel);
+        fuel.setText("Fuel: " + game.getPlayerShip().getFuel());
+
         Button travel = findViewById(R.id.button_travel);
         travel.setOnClickListener(new View.OnClickListener() {
 
@@ -39,9 +42,14 @@ public class Travel extends AppCompatActivity {
                 Spinner mySpinner = findViewById(R.id.planet_spinner);
                 String text = mySpinner.getSelectedItem().toString();
 
+                if (game.getPlayerShip().getFuel() > 0) {
+                    Log.i("Planet", "No Fuel");
+                    startActivity(new Intent(Travel.this, PlanetScreen.class));
+                }
 
                 if (game.getUniverse().setCurrentSystem(text)){
                     Log.i("Planet", game.currentPlanetName());
+                    game.getPlayerShip().setFuel(game.getPlayerShip().getFuel() - 1);
                     startActivity(new Intent(Travel.this, PlanetScreen.class));
                 } else {
                     Log.i("Planet", "Failed Travel");
