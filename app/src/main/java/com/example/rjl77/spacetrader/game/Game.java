@@ -75,6 +75,13 @@ public class Game {
     }
 
     /**
+     *Method to get universe
+     *@return universe
+     */
+    public Universe getUniverse() {
+        return this.universe;
+    }
+    /**
      *Setter for player
      *@param p player
      */
@@ -89,6 +96,5 @@ public class Game {
     public String currentPlanetName() {
         return universe.getCurrentSystem().getName();
     }
-
 
 }
