@@ -45,7 +45,8 @@ public class PlanetScreen extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 finish();
-                System.exit(0);
+//                System.exit(0);
+                moveTaskToBack(true);
             }
         });
     }

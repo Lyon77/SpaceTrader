@@ -11,6 +11,7 @@
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:textColor="#ffff00"
         android:text="Create Player"
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -24,6 +25,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="320dp"
+        android:textColor="#ffff00"
         android:text="Game Difficulty"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -85,6 +87,7 @@
             android:layout_width="105dp"
             android:layout_height="19dp"
             android:layout_centerVertical="true"
+            android:textColor="#ffff00"
             android:text="Pilot Skill Points:" />
 
         <EditText
@@ -115,6 +118,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
+            android:textColor="#ffff00"
             android:text="Fighter Skill Points:" />
 
         <EditText
@@ -145,6 +149,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
+            android:textColor="#ffff00"
             android:text="Trader Skill Points:" />
 
         <EditText
@@ -175,6 +180,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
+            android:textColor="#ffff00"
             android:text="Engineer Skill Points:" />
 
         <EditText
@@ -208,6 +214,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
+            android:textColor="#ffff00"
             android:text="Username:" />
 
         <EditText
