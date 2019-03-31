@@ -97,7 +97,7 @@ public class BuySell extends AppCompatActivity {
         balance = findViewById(R.id.balance);
 
         if (buysel < 0) {
-            if (amount + buysel >= 0) {
+            if (amount + buysel >= 0 && ship.hasRoomToBuy(buysel)) {
                 p.setCredits(credit - buysel * price_);
                 ship.sellCargo(cargoName, Math.abs(buysel));
                 balance.setText(String.valueOf(p.getCredits()));

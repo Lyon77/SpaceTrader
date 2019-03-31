@@ -7,6 +7,7 @@ public class Ship {
     private int maxCargo;
     private HashMap<String, Integer> cargo;
     private int fuel;
+    private int totalCargo;
 
     public Ship() {
         this("Gnat");
@@ -17,6 +18,7 @@ public class Ship {
         this.maxCargo = 15;
         this.cargo = new HashMap<>();
         this.fuel = 14;
+        this.totalCargo = 0;
     }
 
     public String getName() {
@@ -36,8 +38,13 @@ public class Ship {
         }
     }
 
+    public boolean hasRoomToBuy(int amount) {
+        return maxCargo >= totalCargo + amount;
+    }
+
     public void sellCargo(String c, int amount) {
         cargo.put(c, cargo.get(c) - amount);
+        totalCargo -= amount;
     }
 
     public void addCargo(String c, int amount) {
@@ -48,6 +55,7 @@ public class Ship {
             cargo.put(c, amount);
             System.out.println("Added " + cargo.get(c));
         }
+        totalCargo += amount;
     }
 
     public int getFuel() {

@@ -8,13 +8,13 @@ public class Player {
     private int fighter;
     private int trader;
     private int engineer;
-    private String _level;
+//    private String _level;
 
     /**
      *No-args constructor for Player
      */
     public Player() {
-        this("Ryan", 4, 4, 4, 4, "EASY");
+        this("Ryan", 4, 4, 4, 4);
     }
 
     /**
@@ -26,7 +26,7 @@ public class Player {
      * @param eng number of engineer points
      * @param lev difficulty level
      */
-    public Player(String name, int pil, int fight, int trade, int eng, String lev) {
+    public Player(String name, int pil, int fight, int trade, int eng) {
         this.name = name;
         this.pilot = pil;
         this.fighter = fight;
@@ -34,7 +34,7 @@ public class Player {
         this.engineer = eng;
         this.credits = 1000;
         this.ship = new Ship();
-        this._level = lev;
+//        this._level = lev;
     }
 
     /**
@@ -63,25 +63,25 @@ public class Player {
         return this.ship;
     }
 
-    /**
-     *Getter for level
-     *@return level attribute value
-     */
-    public String getLevel() {return _level;};
+//    /**
+//     *Getter for level
+//     *@return level attribute value
+//     */
+//    public String getLevel() {return _level;};
 
-    /**
-     *Setter for level
-     *@return level attribute value
-     */
-    public void set_level(String difficulty) {
-        _level = difficulty;
-    }
+//    /**
+//     *Setter for level
+//     *@return level attribute value
+//     */
+//    public void set_level(String difficulty) {
+//        _level = difficulty;
+//    }
 
     //    @androidx.annotation.NonNull
     @Override
     public String toString() {
         return "\nName: " + this.name + "\n" + "Credits: " + credits + "\n" + "Ship: " + ship.toString()
                 + "\n" + "Pilot Skill: " + pilot + "\n" + "Fighter Skill: " + fighter + "\n" + "Trader Skill: "
-                + trader + "\n" + "Engineer Skill: " + engineer + "\n" + "Game Difficulty: " + _level;
+                + trader + "\n" + "Engineer Skill: " + engineer;
     }
 }

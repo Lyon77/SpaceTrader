@@ -44,12 +44,13 @@ public class MainActivity extends AppCompatActivity {
                     EditText engineer_skill = findViewById(R.id.engineer_skill_points);
                     int engineer = Integer.parseInt(engineer_skill.getText().toString());
                     Spinner mySpinner = findViewById(R.id.game_difficulty_spinner);
-                    String text = mySpinner.getSelectedItem().toString();
+                    String difficulty = mySpinner.getSelectedItem().toString();
                     EditText username = findViewById(R.id.username_entry);
                     String name = username.getText().toString();
 
                     if (pilot + fighter + trader + engineer == 16 && name != null && !name.equals("")) {
-                        game.setPlayer(new Player(name, pilot, fighter, trader, engineer, text));
+                        game.setLevel(GameDifficulty.valueOf(difficulty));
+                        game.setPlayer(new Player(name, pilot, fighter, trader, engineer));
                         Log.i("Player", game.getPlayerInfo());
                         startActivity(new Intent(MainActivity.this, PlanetScreen.class));
                     } else {
