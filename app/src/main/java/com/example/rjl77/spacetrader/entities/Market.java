@@ -5,13 +5,11 @@ import com.example.rjl77.spacetrader.game.Game;
 import java.util.HashMap;
 import java.util.Random;
 
-
 public class Market {
 
     private int techLevel;
     private int resource;
     private HashMap<String, Integer> prices;
-
 
     public enum TradeGood {
         WATER(0, 0, 2, 30, 3, 4, 4, 3),
@@ -35,6 +33,17 @@ public class Market {
         private final int ER;
 
 
+        /**
+         *
+         * @param MTLP minimum tech level to produce
+         * @param MTLU minimum tech level to use
+         * @param TTP
+         * @param basePrice
+         * @param IPL
+         * @param var
+         * @param CR
+         * @param ER
+         */
         private TradeGood(int MTLP, int MTLU, int TTP, int basePrice, int IPL, int var, int CR, int ER) {
             this.MTLP = MTLP;
             this.MTLU = MTLU;
@@ -57,11 +66,17 @@ public class Market {
 
     }
 
+    /**
+     *
+     * @param techLevel
+     * @param resource
+     */
     public Market(int techLevel, int resource) {
         this.techLevel = techLevel;
         this.resource = resource;
         visit();
     }
+
 
     public void visit() {
         prices = new HashMap<>();
