@@ -6,6 +6,9 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import java.io.File;
+
+import android.util.Log;
 
 import com.example.rjl77.spacetrader.R;
 import com.example.rjl77.spacetrader.game.Game;
@@ -47,6 +50,20 @@ public class PlanetScreen extends AppCompatActivity {
                 finish();
 //                System.exit(0);
                 moveTaskToBack(true);
+            }
+        });
+
+        Button save = findViewById(R.id.button_save);
+        save.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                File file = new File(".", "data.json");
+                try {
+                    file.createNewFile();
+                } catch (Exception e){
+                    Log.e("FileCreation", "Failed to create file.");
+                }
+                game.saveJson(file);
             }
         });
     }
