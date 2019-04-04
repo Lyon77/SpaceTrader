@@ -1,6 +1,7 @@
 package com.example.rjl77.spacetrader.views;
 
 import android.content.Intent;
+import android.content.Context;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -57,7 +58,7 @@ public class PlanetScreen extends AppCompatActivity {
         save.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                File file = new File(this.getFilesDir(), "data.json");
+                File file = new File(getApplicationContext().getFilesDir(), "data.json");
                 game.saveJson(file);
             }
         });

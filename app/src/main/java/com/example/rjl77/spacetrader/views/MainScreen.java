@@ -29,7 +29,7 @@ public class MainScreen extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(MainScreen.this, PlanetScreen.class));
-                File file = new File(this.getFilesDir(), "data.json");
+                File file = new File(getApplicationContext().getFilesDir(), "data.json");
                 game.loadJson(file);
             }
         });
