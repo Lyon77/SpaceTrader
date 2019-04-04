@@ -17,14 +17,14 @@ import com.example.rjl77.spacetrader.entities.GameDifficulty;
 import com.example.rjl77.spacetrader.entities.Player;
 import com.example.rjl77.spacetrader.game.Game;
 
-public class MainActivity extends AppCompatActivity {
+public class CreateActivity extends AppCompatActivity {
 
     private Game game;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_create);
 
         game = Game.getInstance();
 
@@ -52,7 +52,7 @@ public class MainActivity extends AppCompatActivity {
                         game.setLevel(GameDifficulty.valueOf(difficulty));
                         game.setPlayer(new Player(name, pilot, fighter, trader, engineer));
                         Log.i("Player", game.getPlayerInfo());
-                        startActivity(new Intent(MainActivity.this, PlanetScreen.class));
+                        startActivity(new Intent(CreateActivity.this, PlanetScreen.class));
                     } else {
                         Log.e("Value", "Invalid inputs");
                     }
@@ -71,7 +71,7 @@ public class MainActivity extends AppCompatActivity {
         gameDifficultySpinner.setAdapter(adapter);
 
         //button to exit the game and close the app
-        final Button exit =  findViewById(R.id.button_exit);
+        final Button exit =  findViewById(R.id.button_new);
         exit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

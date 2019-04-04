@@ -43,7 +43,7 @@ public class PlanetScreen extends AppCompatActivity {
             }
         });
 
-        Button exit =  findViewById(R.id.button_exit);
+        Button exit =  findViewById(R.id.button_new);
         exit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

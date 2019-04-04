@@ -13,7 +13,8 @@
         <activity android:name=".views.BuySell" android:noHistory="true"></activity>
         <activity android:name=".views.MarketView" android:noHistory="true"></activity>
         <activity android:name=".views.Travel" android:noHistory="true"></activity>
-        <activity android:name=".views.MainActivity" android:noHistory="true">
+        <activity android:name=".views.CreateActivity" android:noHistory="true"></activity>
+        <activity android:name=".views.MainScreen" android:noHistory="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
