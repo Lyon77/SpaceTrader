@@ -24,15 +24,17 @@ public class MainScreen extends AppCompatActivity {
 
         game = Game.getInstance();
 
-        Button load =  findViewById(R.id.button_load);
+        Button load = findViewById(R.id.button_load);
         load.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(MainScreen.this, PlanetScreen.class));
+                File file = new File(this.getFilesDir(), "data.json");
+                game.loadJson(file);
             }
         });
 
-        Button new1 =  findViewById(R.id.button_new);
+        Button new1 = findViewById(R.id.button_new);
         new1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

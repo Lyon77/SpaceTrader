@@ -57,12 +57,7 @@ public class PlanetScreen extends AppCompatActivity {
         save.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                File file = new File(".", "data.json");
-                try {
-                    file.createNewFile();
-                } catch (Exception e){
-                    Log.e("FileCreation", "Failed to create file.");
-                }
+                File file = new File(this.getFilesDir(), "data.json");
                 game.saveJson(file);
             }
         });
