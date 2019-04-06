@@ -97,7 +97,7 @@
             android:layout_centerVertical="true"
             android:layout_toRightOf="@id/pilot_skill_text"
             android:gravity="center"
-            android:hint="Pilot Skill Points"
+            android:hint="0"
             android:inputType="number"
             android:singleLine="true" />
 
@@ -128,7 +128,7 @@
             android:layout_centerVertical="true"
             android:layout_toRightOf="@id/fighter_skill_text"
             android:gravity="center"
-            android:hint="Fighter Skill Points"
+            android:hint="0"
             android:inputType="number"
             android:singleLine="true" />
 
@@ -159,7 +159,7 @@
             android:layout_centerVertical="true"
             android:layout_toRightOf="@id/trader_skill_text"
             android:gravity="center"
-            android:hint="Trader Skill Points"
+            android:hint="0"
             android:inputType="number"
             android:singleLine="true" />
 
@@ -190,7 +190,7 @@
             android:layout_centerVertical="true"
             android:layout_toRightOf="@id/engineer_skill_text"
             android:gravity="center"
-            android:hint="Engineer Skill Points"
+            android:hint="0"
             android:inputType="number"
             android:singleLine="true" />
 
