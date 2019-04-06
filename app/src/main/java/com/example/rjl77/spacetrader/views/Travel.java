@@ -9,10 +9,16 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.Spinner;
 import android.widget.TextView;
+import android.widget.Toast;
+
+import java.util.Random;
 
 
 import com.example.rjl77.spacetrader.game.Game;
 import com.example.rjl77.spacetrader.R;
+import com.example.rjl77.spacetrader.entities.Ship;
+import com.example.rjl77.spacetrader.entities.Market.TradeGood;
+
 
 public class Travel extends AppCompatActivity {
 
@@ -41,15 +47,36 @@ public class Travel extends AppCompatActivity {
             public void onClick(View view) {
                 Spinner mySpinner = findViewById(R.id.planet_spinner);
                 String text = mySpinner.getSelectedItem().toString();
+                Ship ship = game.getPlayerShip();
 
-                if (game.getPlayerShip().getFuel() > 0) {
+                if (ship.getFuel() > 0) {
                     Log.i("Planet", "No Fuel");
                     startActivity(new Intent(Travel.this, PlanetScreen.class));
                 }
 
                 if (game.getUniverse().setCurrentSystem(text)){
                     Log.i("Planet", game.currentPlanetName());
-                    game.getPlayerShip().setFuel(game.getPlayerShip().getFuel() - 1);
+                    ship.setFuel(ship.getFuel() - 1);
+                    Random r = new Random();
+                    int randomEvent = r.nextInt(10);
+                    if (randomEvent == 0 && ship.hasCargo(TradeGood.FOOD.toString())) {
+                        ship.sellCargo(TradeGood.FOOD.toString(), ship.cargoAmount(
+                                TradeGood.FOOD.toString())/2);
+                        Toast.makeText(getApplicationContext(), "A hoard of starving pirates " +
+                                "stole half your food.", Toast.LENGTH_LONG).show();
+                    } else if (randomEvent == 1 && ship.hasCargo(TradeGood.NARCOTICS.toString())) {
+                        ship.sellCargo(TradeGood.NARCOTICS.toString(), ship.cargoAmount(
+                                TradeGood.NARCOTICS.toString ()));
+                        Toast.makeText(getApplicationContext(), "The police pulled you over for " +
+                                "speeding and confiscated all your narcotics.",
+                                Toast.LENGTH_LONG).show();
+                    } else if (randomEvent == 2) {
+                        ship.setFuel(ship.getFuel() + 15);
+                        Toast.makeText(getApplicationContext(), "An overburdened gasoline " +
+                                "trader ship gave you 15 units of fuel.", Toast.LENGTH_LONG).show();
+                    } else {
+                        Toast.makeText(getApplicationContext(), "Uneventful flight.", Toast.LENGTH_LONG).show();
+                    }
                     startActivity(new Intent(Travel.this, PlanetScreen.class));
                 } else {
                     Log.i("Planet", "Failed Travel");
