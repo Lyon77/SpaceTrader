@@ -51,7 +51,9 @@ public class MarketAdapter extends RecyclerView.Adapter<MarketAdapter.MarketView
 
     @Override
     public int getItemCount() {
-        if (itemList == null) return 0;
+        if(itemList == null) {
+            return 0;
+        }
         return itemList.size();
     }
 

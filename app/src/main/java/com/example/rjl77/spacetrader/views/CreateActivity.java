@@ -48,7 +48,7 @@ public class CreateActivity extends AppCompatActivity {
                     EditText username = findViewById(R.id.username_entry);
                     String name = username.getText().toString();
 
-                    if (pilot + fighter + trader + engineer == 16 && name != null && !name.equals("")) {
+                    if (pilot + fighter + trader + engineer == 16 && name.isEmpty()) {
                         game.setLevel(GameDifficulty.valueOf(difficulty));
                         game.setPlayer(new Player(name, pilot, fighter, trader, engineer));
                         Log.i("Player", game.getPlayerInfo());
@@ -66,7 +66,8 @@ public class CreateActivity extends AppCompatActivity {
 
         //set difficulty
         Spinner gameDifficultySpinner = findViewById(R.id.game_difficulty_spinner);
-        ArrayAdapter<GameDifficulty> adapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_item, GameDifficulty.values());
+        ArrayAdapter<GameDifficulty> adapter = new ArrayAdapter<>(this ,
+                android.R.layout.simple_spinner_item, GameDifficulty.values());
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         gameDifficultySpinner.setAdapter(adapter);
 

@@ -29,12 +29,9 @@ public class BuySell extends AppCompatActivity {
     private TextView cargo;
     private TextView balance;
     private EditText buysell;
-    private Button save_button;
-    private Button exit_button;
     private Game game = Game.getInstance();
     private Player p = game.getPlayer();
     private Ship ship = p.getShip();
-    private Item item;
     private String cargoName;
 
     @Override
@@ -50,8 +47,8 @@ public class BuySell extends AppCompatActivity {
         cargo = findViewById(R.id.cargo);
         balance = findViewById(R.id.balance);
         buysell = findViewById(R.id.buysell);
-        save_button = findViewById(R.id.save_button);
-        exit_button = findViewById(R.id.exit_button);
+        Button save_button = findViewById(R.id.save_button);
+        Button exit_button = findViewById(R.id.exit_button);
 
 
         //buy or sell - set default data
@@ -74,7 +71,7 @@ public class BuySell extends AppCompatActivity {
         save_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                onSavePressed(v);
+                onSavePressed();
             }
         });
 
@@ -83,9 +80,8 @@ public class BuySell extends AppCompatActivity {
     /**
      * Button handler save
      *
-     * @param view the button that was pressed for buy and sell
      */
-    public void onSavePressed(View view) {
+    public void onSavePressed() {
         int buysel = Integer.parseInt(buysell.getText().toString());
         int credit = p.getCredits();
         int price_ = Integer.parseInt(price.getText().toString());
@@ -97,7 +93,7 @@ public class BuySell extends AppCompatActivity {
         balance = findViewById(R.id.balance);
 
         if (buysel < 0) {
-            if (amount + buysel >= 0 && ship.hasRoomToBuy(buysel)) {
+            if ((amount + buysel >= 0) && ship.hasRoomToBuy(buysel)) {
                 p.setCredits(credit - buysel * price_);
                 ship.sellCargo(cargoName, Math.abs(buysel));
                 balance.setText(String.valueOf(p.getCredits()));

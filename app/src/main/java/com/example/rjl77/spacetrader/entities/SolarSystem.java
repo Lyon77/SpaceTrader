@@ -37,21 +37,21 @@ public class SolarSystem {
         market = new Market(techLevel, resource);
     }
 
-    /**
-    *Getter for x
-    *@return x attribute value
-    */
-    public int getX() {
-        return x;
-    }
-
-    /**
-    *Getter for y
-    *@return y attribute value
-    */
-    public int getY() {
-        return y;
-    }
+//    /**
+//    *Getter for x
+//    *@return x attribute value
+//    */
+//    public int getX() {
+//        return x;
+//    }
+//
+//    /**
+//    *Getter for y
+//    *@return y attribute value
+//    */
+//    public int getY() {
+//        return y;
+//    }
 
     /**
     *Getter for name
@@ -85,7 +85,8 @@ public class SolarSystem {
     @Override
     public String toString() {
         return "Planet named " + this.name + " exists at x: " + this.x + " y: " + this.y
-                + ". Its tech level is " + this.techLevel + " and its resource level is " + this.resource + ".";
+                + ". Its tech level is " + this.techLevel + " and its resource level is "
+                + this.resource + ".";
     }
 
     @Override
@@ -103,5 +104,9 @@ public class SolarSystem {
         if (!(obj instanceof SolarSystem)) {return false;}
         SolarSystem copy = (SolarSystem) obj;
         return this.x == copy.getX() && this.y == copy.getY();
+    }
+
+    public boolean equalName(String s) {
+        return this.name.equals(s);
     }
 }

@@ -45,7 +45,7 @@ public class MarketView extends AppCompatActivity {
         /*get balance
          */
         balance = findViewById(R.id.balance);
-        balance.setText(String.valueOf(game.getPlayer().getCredits()));
+        balance.setText(String.valueOf(game.getPlayerCredits()));
 
         leaveBtn = findViewById(R.id.leave);
 

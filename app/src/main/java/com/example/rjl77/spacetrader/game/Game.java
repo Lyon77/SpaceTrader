@@ -70,6 +70,14 @@ public class Game {
         return this.p;
     }
 
+    /**
+     *Getter for player
+     *@return player credit amount
+     */
+    public int getPlayerCredits() {
+        return this.p.getCredits();
+    }
+
     public Ship getPlayerShip() {
         return p.getShip();
     }
@@ -102,10 +110,10 @@ public class Game {
     }
 
     public String currentPlanetName() {
-        return universe.getCurrentSystem().getName();
+        return universe.getCurrentSystemName();
     }
 
-    public boolean loadJson(File file) {
+    public void loadJson(File file) {
         try {
             BufferedReader input = new BufferedReader(new FileReader(file));
             //Since we saved the json as a string, we just read in the string normally
@@ -126,7 +134,7 @@ public class Game {
 
     }
 
-    public boolean saveJson(File file ) {
+    public void saveJson(File file ) {
 
         try {
             PrintWriter writer = new PrintWriter(file);

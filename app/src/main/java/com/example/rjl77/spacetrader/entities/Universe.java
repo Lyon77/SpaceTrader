@@ -21,8 +21,8 @@ public class Universe {
     public Universe() {
         system = new HashSet<>();
         Random cood = new Random();
-        systemNames = new ArrayList<>(Arrays.asList("Bretel", "Guinifer", "Rubicum", "Iodine", "Laertes",
-                "Omphalos", "Tantalos", "Xerxes", "RIP Kishan", "Exo"));
+        systemNames = new ArrayList<>(Arrays.asList("Bretel", "Guinifer", "Rubicum", "Iodine",
+                "Laertes", "Omphalos", "Tantalos", "Xerxes", "RIP Kishan", "Exo"));
 
         while (system.size() < 10) {
             int x = cood.nextInt(20);
@@ -44,12 +44,16 @@ public class Universe {
         return currentSystem;
     }
 
+    public String getCurrentSystemName() {
+        return currentSystem.getName();
+    }
+
     public boolean setCurrentSystem(String systemName) {
         if (systemName.equals(currentSystem.getName())){
             return false;
         }
         for (SolarSystem ss : system) {
-            if (ss.getName().equals(systemName)){
+            if (ss.equalName(systemName)){
                 currentSystem = ss;
                 return true;
             }

@@ -24,7 +24,6 @@ public class Player {
      * @param fight number of fighter points
      * @param trade number of trader points
      * @param eng number of engineer points
-     * @param lev difficulty level
      */
     public Player(String name, int pil, int fight, int trade, int eng) {
         this.name = name;
@@ -80,8 +79,9 @@ public class Player {
     //    @androidx.annotation.NonNull
     @Override
     public String toString() {
-        return "\nName: " + this.name + "\n" + "Credits: " + credits + "\n" + "Ship: " + ship.toString()
-                + "\n" + "Pilot Skill: " + pilot + "\n" + "Fighter Skill: " + fighter + "\n" + "Trader Skill: "
-                + trader + "\n" + "Engineer Skill: " + engineer;
+        return "\nName: " + this.name + "\n" + "Credits: " + credits + "\n" + "Ship: "
+                + ship.toString() + "\n" + "Pilot Skill: " + pilot + "\n" + "Fighter Skill: "
+                + fighter + "\n" + "Trader Skill: " + trader + "\n" + "Engineer Skill: "
+                + engineer;
     }
 }

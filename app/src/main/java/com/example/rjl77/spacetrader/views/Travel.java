@@ -14,6 +14,7 @@ import android.widget.Toast;
 import java.util.Random;
 
 
+import com.example.rjl77.spacetrader.entities.Universe;
 import com.example.rjl77.spacetrader.game.Game;
 import com.example.rjl77.spacetrader.R;
 import com.example.rjl77.spacetrader.entities.Ship;
@@ -31,14 +32,17 @@ public class Travel extends AppCompatActivity {
         setContentView(R.layout.travel_selector);
 
         game = Game.getInstance();
+        Universe universe = game.getUniverse();
+        Ship ship = game.getPlayerShip();
 
         Spinner planetSpinner = findViewById(R.id.planet_spinner);
-        ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_item, game.getUniverse().getSystemNames());
+        ArrayAdapter<String> adapter = new ArrayAdapter<>(this,
+                android.R.layout.simple_spinner_item, universe.getSystemNames());
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         planetSpinner.setAdapter(adapter);
 
         TextView fuel = findViewById(R.id.fuel);
-        fuel.setText("Fuel: " + game.getPlayerShip().getFuel());
+        fuel.setText("Fuel: " + ship.getFuel());
 
         Button travel = findViewById(R.id.button_travel);
         travel.setOnClickListener(new View.OnClickListener() {
@@ -47,6 +51,7 @@ public class Travel extends AppCompatActivity {
             public void onClick(View view) {
                 Spinner mySpinner = findViewById(R.id.planet_spinner);
                 String text = mySpinner.getSelectedItem().toString();
+                Universe uni = game.getUniverse();
                 Ship ship = game.getPlayerShip();
 
                 if (ship.getFuel() > 0) {
@@ -54,7 +59,7 @@ public class Travel extends AppCompatActivity {
                     startActivity(new Intent(Travel.this, PlanetScreen.class));
                 }
 
-                if (game.getUniverse().setCurrentSystem(text)){
+                if (uni.setCurrentSystem(text)){
                     Log.i("Planet", game.currentPlanetName());
                     ship.setFuel(ship.getFuel() - 1);
                     Random r = new Random();
@@ -75,7 +80,8 @@ public class Travel extends AppCompatActivity {
                         Toast.makeText(getApplicationContext(), "An overburdened gasoline " +
                                 "trader ship gave you 15 units of fuel.", Toast.LENGTH_LONG).show();
                     } else {
-                        Toast.makeText(getApplicationContext(), "Uneventful flight.", Toast.LENGTH_LONG).show();
+                        Toast.makeText(getApplicationContext(), "Uneventful flight.",
+                                Toast.LENGTH_LONG).show();
                     }
                     startActivity(new Intent(Travel.this, PlanetScreen.class));
                 } else {

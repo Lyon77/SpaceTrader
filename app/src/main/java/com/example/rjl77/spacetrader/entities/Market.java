@@ -44,7 +44,8 @@ public class Market {
          * @param CR
          * @param ER
          */
-        private TradeGood(int MTLP, int MTLU, int TTP, int basePrice, int IPL, int var, int CR, int ER) {
+        TradeGood(int MTLP, int MTLU, int TTP, int basePrice, int IPL,
+                  int var, int CR, int ER) {
             this.MTLP = MTLP;
             this.MTLU = MTLU;
             this.TTP = TTP;
@@ -78,7 +79,7 @@ public class Market {
     }
 
 
-    public void visit() {
+    private void visit() {
         prices = new HashMap<>();
         Random r = new Random();
         for (TradeGood tg : TradeGood.values()) {
@@ -88,7 +89,8 @@ public class Market {
                 if (varSign == 0) {
                     varActual *= -1;
                 }
-                int price = tg.getBasePrice() + tg.getIPL() * (techLevel - tg.getMTLP()) + varActual;
+                int price = tg.getBasePrice() + tg.getIPL() * (techLevel - tg.getMTLP())
+                        + varActual;
                 if (resource == tg.getCR()) {
                     price /= varActual;
                 } else if (resource == tg.getER()) {
@@ -100,7 +102,7 @@ public class Market {
     }
 
     public HashMap<String, Integer> getPrices() {
-        return prices;
+        return this.prices;
     }
 
 
