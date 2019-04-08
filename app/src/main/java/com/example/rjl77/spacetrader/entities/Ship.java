@@ -57,6 +57,8 @@ public class Ship {
      */
     public boolean hasCargo(String c) {return cargo.containsKey(c);}
 
+    public HashMap<String, Integer> getCargo() {return this.cargo;}
+
     /**
      * Checks how much of a given cargo the ship contains
      * @param c name of the type of cargo
