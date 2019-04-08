@@ -49,7 +49,7 @@ public class Universe {
     }
 
     public boolean setCurrentSystem(String systemName) {
-        if (systemName.equals(currentSystem.getName())){
+        if (currentSystem.getName().equals(systemName)){
             return false;
         }
         for (SolarSystem ss : system) {
