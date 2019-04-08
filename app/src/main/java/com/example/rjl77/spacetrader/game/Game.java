@@ -127,10 +127,7 @@ public class Game {
             input.close();
         } catch (IOException e) {
             Log.e("UserManagementFacade", "Failed to open/read the buffered reader for json");
-            return false;
         }
-
-        return true;
 
     }
 
@@ -158,10 +155,7 @@ public class Game {
             writer.close();
         } catch (FileNotFoundException e) {
             Log.e("UserManagementFacade", "Failed to open json file for output");
-            return false;
         }
-
-        return true;
     }
 
 }
