@@ -31,6 +31,8 @@ public class Ship {
 
     public boolean hasCargo(String c) {return cargo.containsKey(c);}
 
+    public HashMap<String, Integer> getCargo() {return this.cargo;}
+
     public int cargoAmount(String c) {
         Log.i("Ship", "Has " + c + " " + cargo.containsKey(c));
         if (cargo.containsKey(c)) {
