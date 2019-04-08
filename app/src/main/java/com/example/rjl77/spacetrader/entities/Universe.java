@@ -32,8 +32,8 @@ public class Universe {
             SolarSystem newSystem = new SolarSystem(x, y, name);
 
             if (!system.contains(newSystem)) {
-                Log.i("Planet", "Creating SolarSystem " + name + "at " + x + " " + y);
-                Log.i("Planet", newSystem.toString());
+                //Log.i("Planet", "Creating SolarSystem " + name + "at " + x + " " + y);
+                //Log.i("Planet", newSystem.toString());
                 system.add(newSystem);
                 currentSystem = newSystem;
             }
@@ -58,7 +58,7 @@ public class Universe {
                 return true;
             }
         }
-        Log.i("Planet", "Something with the Spinner Failed");
+        //Log.i("Planet", "Something with the Spinner Failed");
         return false;
     }
 

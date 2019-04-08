@@ -19,12 +19,18 @@ public class UniverseTest {
     }
 
     @Test
-    public void testAdd() {
+    public void testAddCurrentName() {
         assertEquals("Universe set current name", false,
                 uni.setCurrentSystem(uni.getCurrentSystemName()));
+    }
+    @Test
+    public void testAddUnknownName() {
         assertEquals("Universe set unknown name", false,
                 uni.setCurrentSystem("Fun zone"));
-        assertEquals("Universe set known name", false,
+    }
+    @Test
+    public void testAddKnownName() {
+        assertEquals("Universe set known name", true,
                 uni.setCurrentSystem("Iodine"));
     }
 }
