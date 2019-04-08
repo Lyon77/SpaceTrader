@@ -18,6 +18,11 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.HashMap;
 
+/**
+ * Singleton representing the game
+ * @author Team 71
+ * @version 1.0
+ */
 public class Game {
     private GameDifficulty level;
     private Player p;
@@ -26,6 +31,10 @@ public class Game {
     //making the class a singleton
     private static Game instance = new Game();
 
+    /**
+     * Getter for the game singleton
+     * @return game instance
+     */
     public static Game getInstance() { return instance; }
 
     /**
@@ -71,13 +80,17 @@ public class Game {
     }
 
     /**
-     *Getter for player
+     *Getter for player credits
      *@return player credit amount
      */
     public int getPlayerCredits() {
         return this.p.getCredits();
     }
 
+    /**
+     * Getter for ship
+     * @return player's ship
+     */
     public Ship getPlayerShip() {
         return p.getShip();
     }
@@ -105,10 +118,18 @@ public class Game {
         this.p = p;
     }
 
+    /**
+     * Getter for market
+     * @return market of current solarSystem
+     */
     public HashMap<String, Integer> getCurrentSystemMarket() {
         return universe.getCurrentSystemMarket();
     }
 
+    /**
+     * Getter for current planet name
+     * @return planet name
+     */
     public String currentPlanetName() {
         return universe.getCurrentSystemName();
     }
