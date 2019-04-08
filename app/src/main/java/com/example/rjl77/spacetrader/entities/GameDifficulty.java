@@ -1,7 +1,7 @@
 
 package com.example.rjl77.spacetrader.entities;
 
-import java.io.Serializable;
+//import java.io.Serializable;
 
 public enum GameDifficulty{
     BEGINNER("BEGINNER"),
@@ -10,15 +10,15 @@ public enum GameDifficulty{
     HARD("HARD"),
     IMPOSSIBLE("IMPOSSIBLE");
 
-    private String difficulty;
+    private final String difficulty;
 
     GameDifficulty(String difficulty) {
         this.difficulty = difficulty;
     }
 
-    public String getLevel() {
-        return difficulty;
-    }
+//    public String getLevel() {
+//        return difficulty;
+//    }
 
     @Override
     public String toString() {

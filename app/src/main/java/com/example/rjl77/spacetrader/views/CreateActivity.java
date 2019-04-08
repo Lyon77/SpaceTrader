@@ -48,7 +48,7 @@ public class CreateActivity extends AppCompatActivity {
                     EditText username = findViewById(R.id.username_entry);
                     String name = username.getText().toString();
 
-                    if (pilot + fighter + trader + engineer == 16 && name.isEmpty()) {
+                    if (pilot + fighter + trader + engineer == 16 && !name.isEmpty()) {
                         game.setLevel(GameDifficulty.valueOf(difficulty));
                         game.setPlayer(new Player(name, pilot, fighter, trader, engineer));
                         Log.i("Player", game.getPlayerInfo());

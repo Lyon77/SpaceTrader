@@ -5,8 +5,8 @@ import android.util.Log;
 import java.util.HashMap;
 
 public class Ship {
-    private String name;
-    private int maxCargo;
+    private final String name;
+    private final int maxCargo;
     private HashMap<String, Integer> cargo;
     private int fuel;
     private int totalCargo;
@@ -27,11 +27,11 @@ public class Ship {
         return this.name;
     }
 
-    public int getMaxCargo() {return this.maxCargo;}
+//    public int getMaxCargo() {return this.maxCargo;}
 
     public boolean hasCargo(String c) {return cargo.containsKey(c);}
 
-    public HashMap<String, Integer> getCargo() {return this.cargo;}
+//    public HashMap<String, Integer> getCargo() {return this.cargo;}
 
     public int cargoAmount(String c) {
         Log.i("Ship", "Has " + c + " " + cargo.containsKey(c));

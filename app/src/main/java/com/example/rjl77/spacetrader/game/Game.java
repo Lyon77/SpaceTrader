@@ -1,10 +1,10 @@
 package com.example.rjl77.spacetrader.game;
 
 import com.example.rjl77.spacetrader.entities.GameDifficulty;
-import com.example.rjl77.spacetrader.entities.Market;
+//import com.example.rjl77.spacetrader.entities.Market;
 import com.example.rjl77.spacetrader.entities.Player;
 import com.example.rjl77.spacetrader.entities.Ship;
-import com.example.rjl77.spacetrader.entities.SolarSystem;
+//import com.example.rjl77.spacetrader.entities.SolarSystem;
 import com.example.rjl77.spacetrader.entities.Universe;
 import com.google.gson.Gson;
 
@@ -21,7 +21,7 @@ import java.util.HashMap;
 public class Game {
     private GameDifficulty level;
     private Player p;
-    private Universe universe;
+    private final Universe universe;
 
     //making the class a singleton
     private static Game instance = new Game();
@@ -46,13 +46,13 @@ public class Game {
         universe = new Universe();
     }
 
-    /**
-     *Getter for level
-     *@return level attribute value
-     */
-    public GameDifficulty getLevel() {
-        return this.level;
-    }
+//    /**
+//     *Getter for level
+//     *@return level attribute value
+//     */
+//    public GameDifficulty getLevel() {
+//        return this.level;
+//    }
 
     /**
      *Setter for level

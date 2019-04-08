@@ -1,13 +1,13 @@
 package com.example.rjl77.spacetrader.entities;
 
 public class Player {
-    private String name;
+    private final String name;
     private int credits;
     private Ship ship;
-    private int pilot;
-    private int fighter;
-    private int trader;
-    private int engineer;
+    private final int pilot;
+    private final int fighter;
+    private final int trader;
+    private final int engineer;
 //    private String _level;
 
     /**
@@ -36,13 +36,13 @@ public class Player {
 //        this._level = lev;
     }
 
-    /**
-     *Getter for name
-     *@return name attribute value
-     */
-    public String getName() {
-        return this.name;
-    }
+//    /**
+//     *Getter for name
+//     *@return name attribute value
+//     */
+//    public String getName() {
+//        return this.name;
+//    }
 
     /**
      *Getter for credits

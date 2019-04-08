@@ -1,6 +1,6 @@
 package com.example.rjl77.spacetrader.entities;
 
-import android.util.Log;
+//import android.util.Log;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -40,9 +40,9 @@ public class Universe {
         }
     }
 
-    public SolarSystem getCurrentSystem() {
-        return currentSystem;
-    }
+//    public SolarSystem getCurrentSystem() {
+//        return currentSystem;
+//    }
 
     public String getCurrentSystemName() {
         return currentSystem.getName();

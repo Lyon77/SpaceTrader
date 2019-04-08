@@ -1,13 +1,13 @@
 package com.example.rjl77.spacetrader.entities;
 import java.io.Serializable;
-import java.util.ArrayList;
-import java.util.List;
+//import java.util.ArrayList;
+//import java.util.List;
 
 public class Item implements Serializable {
 
-    private String name;
+    private final String name;
 
-    private int price;
+    private final int price;
 
     private int cargoAmt;
 
@@ -29,5 +29,5 @@ public class Item implements Serializable {
         return cargoAmt;
     }
 
-    public void setCargoAmt(int amount) { cargoAmt = amount; }
+//    public void setCargoAmt(int amount) { cargoAmt = amount; }
 }

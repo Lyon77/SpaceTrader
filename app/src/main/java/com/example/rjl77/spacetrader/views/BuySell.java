@@ -1,19 +1,19 @@
 package com.example.rjl77.spacetrader.views;
 
-import android.arch.lifecycle.ViewModelProviders;
+//import android.arch.lifecycle.ViewModelProviders;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
-import android.widget.ArrayAdapter;
+//import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.Spinner;
+//import android.widget.Spinner;
 import android.widget.TextView;
 
 import com.example.rjl77.spacetrader.R;
-import com.example.rjl77.spacetrader.entities.Item;
+//import com.example.rjl77.spacetrader.entities.Item;
 import com.example.rjl77.spacetrader.entities.Player;
 import com.example.rjl77.spacetrader.entities.Ship;
 import com.example.rjl77.spacetrader.game.Game;
@@ -29,9 +29,9 @@ public class BuySell extends AppCompatActivity {
     private TextView cargo;
     private TextView balance;
     private EditText buysell;
-    private Game game = Game.getInstance();
-    private Player p = game.getPlayer();
-    private Ship ship = p.getShip();
+    private final Game game = Game.getInstance();
+    private final Player p = game.getPlayer();
+    private final Ship ship = p.getShip();
     private String cargoName;
 
     @Override
@@ -81,7 +81,7 @@ public class BuySell extends AppCompatActivity {
      * Button handler save
      *
      */
-    public void onSavePressed() {
+    private void onSavePressed() {
         int buysel = Integer.parseInt(buysell.getText().toString());
         int credit = p.getCredits();
         int price_ = Integer.parseInt(price.getText().toString());

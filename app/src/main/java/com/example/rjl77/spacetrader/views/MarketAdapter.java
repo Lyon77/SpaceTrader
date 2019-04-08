@@ -66,9 +66,9 @@ public class MarketAdapter extends RecyclerView.Adapter<MarketAdapter.MarketView
         itemList = list;
     }
 
-    public Item getItemAt(int position) {
-        return itemList.get(position);
-    }
+//    public Item getItemAt(int position) {
+//        return itemList.get(position);
+//    }
 
 
     class MarketViewHolder extends RecyclerView.ViewHolder {
@@ -84,9 +84,9 @@ public class MarketAdapter extends RecyclerView.Adapter<MarketAdapter.MarketView
          * Construct a new view holder, grab all the widget references and setup the
          * listener to detect a click on this item.
          *
-         * @param itemView
+         * @param itemView used in MarketViewHolder
          */
-        public MarketViewHolder(@NonNull View itemView) {
+        protected MarketViewHolder(@NonNull View itemView) {
             super(itemView);
             price = itemView.findViewById(R.id.uni);
             priceTag = itemView.findViewById(R.id.priceTag);

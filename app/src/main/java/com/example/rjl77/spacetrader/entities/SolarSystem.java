@@ -4,12 +4,12 @@ import java.util.HashMap;
 import java.util.Random;
 
 public class SolarSystem {
-    private int x;
-    private int y;
-    private String name;
-    private int techLevel;
-    private int resource;
-    private Market market;
+    private final int x;
+    private final int y;
+    private final String name;
+    private final int techLevel;
+    private final int resource;
+    private final Market market;
 
 
     /**
@@ -41,7 +41,7 @@ public class SolarSystem {
     *Getter for x
     *@return x attribute value
     */
-    public int getX() {
+    private int getX() {
         return x;
     }
 
@@ -49,7 +49,7 @@ public class SolarSystem {
     *Getter for y
     *@return y attribute value
     */
-    public int getY() {
+    private int getY() {
         return y;
     }
 
@@ -61,21 +61,21 @@ public class SolarSystem {
         return name;
     }
 
-    /**
-    *Getter for techLevel
-    *@return techLevel attribute value
-    */
-    public int getTechLevel() {
-        return techLevel;
-    }
+//    /**
+//    *Getter for techLevel
+//    *@return techLevel attribute value
+//    */
+//    public int getTechLevel() {
+//        return techLevel;
+//    }
 
     /**
     *Getter for resource
     *@return resource attribute value
     */
-    public int getResource() {
-        return resource;
-    }
+//    public int getResource() {
+//        return resource;
+//    }
 
     public HashMap<String, Integer> getMarket() {
         return market.getPrices();
