@@ -57,6 +57,10 @@ public class Ship {
      */
     public boolean hasCargo(String c) {return cargo.containsKey(c);}
 
+    /**
+     * Gatter for cargo
+     * @return hashmap of all cargo contained in the ship
+     */
     public HashMap<String, Integer> getCargo() {return this.cargo;}
 
     /**

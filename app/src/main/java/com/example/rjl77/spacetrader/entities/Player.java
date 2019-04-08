@@ -1,5 +1,10 @@
 package com.example.rjl77.spacetrader.entities;
 
+/**
+ * Represents a player
+ * @author Team 71
+ * @version 1.0
+ */
 public class Player {
     private String name;
     private int credits;
@@ -52,6 +57,10 @@ public class Player {
         return this.credits;
     }
 
+    /**
+     * Setter for credits
+     * @param cred the number of credits the player should have
+     */
     public void setCredits(int cred) { credits = cred; }
 
     /**
