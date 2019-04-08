@@ -37,21 +37,21 @@ public class SolarSystem {
         market = new Market(techLevel, resource);
     }
 
-//    /**
-//    *Getter for x
-//    *@return x attribute value
-//    */
-//    public int getX() {
-//        return x;
-//    }
-//
-//    /**
-//    *Getter for y
-//    *@return y attribute value
-//    */
-//    public int getY() {
-//        return y;
-//    }
+    /**
+    *Getter for x
+    *@return x attribute value
+    */
+    public int getX() {
+        return x;
+    }
+
+    /**
+    *Getter for y
+    *@return y attribute value
+    */
+    public int getY() {
+        return y;
+    }
 
     /**
     *Getter for name
