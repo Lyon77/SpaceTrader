@@ -13,6 +13,11 @@ import java.io.File;
 import com.example.rjl77.spacetrader.R;
 import com.example.rjl77.spacetrader.game.Game;
 
+/**
+ * Represents main screen of game
+ * @author Team 71
+ * @version 1.0
+ */
 public class MainScreen extends AppCompatActivity {
 
     private Game game;

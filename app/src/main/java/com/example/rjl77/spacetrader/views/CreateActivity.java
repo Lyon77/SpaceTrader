@@ -17,6 +17,11 @@ import com.example.rjl77.spacetrader.entities.GameDifficulty;
 import com.example.rjl77.spacetrader.entities.Player;
 import com.example.rjl77.spacetrader.game.Game;
 
+/**
+ * Represents screen for inputting player information and creating game
+ * @author Team 71
+ * @version 1.0
+ */
 public class CreateActivity extends AppCompatActivity {
 
     private Game game;

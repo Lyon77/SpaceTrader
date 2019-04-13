@@ -18,7 +18,11 @@ import com.example.rjl77.spacetrader.entities.Player;
 import com.example.rjl77.spacetrader.entities.Ship;
 import com.example.rjl77.spacetrader.game.Game;
 
-
+/**
+ * Represents screen for purchasing or selling an item in the market
+ * @author Team 71
+ * @version 1.0
+ */
 public class BuySell extends AppCompatActivity {
 
     /* ************************

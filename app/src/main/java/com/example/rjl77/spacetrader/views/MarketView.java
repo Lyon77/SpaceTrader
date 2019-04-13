@@ -22,6 +22,11 @@ import com.example.rjl77.spacetrader.R;
 import com.example.rjl77.spacetrader.entities.Item;
 import com.example.rjl77.spacetrader.game.Game;
 
+/**
+ * Represents screen for market
+ * @author Team 71
+ * @version 1.0
+ */
 public class MarketView extends AppCompatActivity {
 
     @Override

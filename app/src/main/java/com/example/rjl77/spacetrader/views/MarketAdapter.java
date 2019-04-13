@@ -18,6 +18,11 @@ import com.example.rjl77.spacetrader.entities.Ship;
 import com.example.rjl77.spacetrader.game.Game;
 
 
+/**
+ * Represents screen for viewing items in marketplace
+ * @author Team 71
+ * @version 1.0
+ */
 public class MarketAdapter extends RecyclerView.Adapter<MarketAdapter.MarketViewHolder> {
 
     private List<Item> itemList = new ArrayList<>();

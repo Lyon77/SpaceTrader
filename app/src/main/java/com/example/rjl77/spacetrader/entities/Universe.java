@@ -9,6 +9,11 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Random;
 
+/**
+ * Represents the universe
+ * @author Team 71
+ * @version 1.0
+ */
 public class Universe {
 
     private HashSet<SolarSystem> system;
@@ -44,10 +49,19 @@ public class Universe {
 //        return currentSystem;
 //    }
 
+    /**
+     * Getter for system name
+     * @return name of current solar system
+     */
     public String getCurrentSystemName() {
         return currentSystem.getName();
     }
 
+    /**
+     * Setter for current system
+     * @param systemName String name of desired solar system
+     * @return whether it is possible to travel to that system
+     */
     public boolean setCurrentSystem(String systemName) {
         if (currentSystem.getName().equals(systemName)){
             return false;
@@ -62,10 +76,18 @@ public class Universe {
         return false;
     }
 
+    /**
+     * Getter for market in current system
+     * @return hashmap of items and prices
+     */
     public HashMap<String, Integer> getCurrentSystemMarket() {
         return currentSystem.getMarket();
     }
 
+    /**
+     * Getter for all solar system names
+     * @return List of all solar system names
+     */
     public List<String> getSystemNames() {return systemNames;}
 
 }

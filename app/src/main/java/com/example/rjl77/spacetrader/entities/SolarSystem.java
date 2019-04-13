@@ -3,6 +3,11 @@ package com.example.rjl77.spacetrader.entities;
 import java.util.HashMap;
 import java.util.Random;
 
+/**
+ * Represents a solar system/planet
+ * @author Team 71
+ * @version 1.0
+ */
 public class SolarSystem {
     private final int x;
     private final int y;
@@ -77,6 +82,10 @@ public class SolarSystem {
 //        return resource;
 //    }
 
+    /**
+     * Getter for market items
+     * @return hashmap of items and prices
+     */
     public HashMap<String, Integer> getMarket() {
         return market.getPrices();
     }
@@ -106,6 +115,11 @@ public class SolarSystem {
         return this.x == copy.getX() && this.y == copy.getY();
     }
 
+    /**
+     * Checks if the solar system's name equals an input string
+     * @param s name to check
+     * @return whether the names are the same
+     */
     public boolean equalName(String s) {
         return this.name.equals(s);
     }

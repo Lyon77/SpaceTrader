@@ -20,7 +20,11 @@ import com.example.rjl77.spacetrader.R;
 import com.example.rjl77.spacetrader.entities.Ship;
 import com.example.rjl77.spacetrader.entities.Market.TradeGood;
 
-
+/**
+ * Represents screen for selecting travel
+ * @author Team 71
+ * @version 1.0
+ */
 public class Travel extends AppCompatActivity {
 
     private Game game;

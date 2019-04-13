@@ -14,6 +14,11 @@ import java.io.File;
 import com.example.rjl77.spacetrader.R;
 import com.example.rjl77.spacetrader.game.Game;
 
+/**
+ * Represents screen for current planet
+ * @author Team 71
+ * @version 1.0
+ */
 public class PlanetScreen extends AppCompatActivity {
 
     private Game game;
