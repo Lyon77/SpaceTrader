@@ -29,9 +29,14 @@ public class MarketAdapter extends RecyclerView.Adapter<MarketAdapter.MarketView
 
     private OnItemClickListener listener;
 
+    /**
+     * Created a view holder for the market
+     * @param parent is the view group to send to the parent class
+     * @return a marketviewholder containing the data about the item
+     */
     @NonNull
     @Override
-    public MarketViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int i) {
+    public MarketViewHolder onCreateViewHolder(@NonNull ViewGroup parent) {
 
         View itemView = LayoutInflater.from(parent.getContext())
                 .inflate(R.layout.market_item, parent, false);
@@ -39,6 +44,11 @@ public class MarketAdapter extends RecyclerView.Adapter<MarketAdapter.MarketView
         return new MarketViewHolder(itemView);
     }
 
+    /**
+     * Sets up the display items
+     * @param holder the place to hold the data
+     * @param position which item to place the data into
+     */
     @Override
     public void onBindViewHolder(@NonNull MarketViewHolder holder, int position) {
 
@@ -54,6 +64,10 @@ public class MarketAdapter extends RecyclerView.Adapter<MarketAdapter.MarketView
 
     }
 
+    /**
+     * get the amount of items int item list
+     * @return the amount of items
+     */
     @Override
     public int getItemCount() {
         if(itemList == null) {
@@ -62,6 +76,11 @@ public class MarketAdapter extends RecyclerView.Adapter<MarketAdapter.MarketView
         return itemList.size();
     }
 
+    /**
+     * creates the item list
+     * @param market the current market
+     * @param ship the player's ship
+     */
     public void setItemList(HashMap<String, Integer> market, Ship ship) {
         List<Item> list = new ArrayList<>();
         for (Map.Entry<String, Integer> entry : market.entrySet()) {
@@ -75,7 +94,9 @@ public class MarketAdapter extends RecyclerView.Adapter<MarketAdapter.MarketView
 //        return itemList.get(position);
 //    }
 
-
+    /**
+     * The view holder for the items
+     */
     class MarketViewHolder extends RecyclerView.ViewHolder {
         //View holder needs reference to each widget in the individual item in the list
         private TextView price;
@@ -114,10 +135,16 @@ public class MarketAdapter extends RecyclerView.Adapter<MarketAdapter.MarketView
         }
     }
 
+    /**
+     * calls the item clicked method
+     */
     public interface OnItemClickListener {
         void onItemClicked(Item course);
     }
 
+    /**
+     * sets the item click listener
+     */
     public void setOnItemClickListener(OnItemClickListener listener) {
         this.listener = listener;
     }
