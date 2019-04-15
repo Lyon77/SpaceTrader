@@ -134,7 +134,10 @@ public class Game {
         return universe.getCurrentSystemName();
     }
 
-
+    /**
+     * this method loads the data into the system
+     * @param file loads in the file where it has to grab the data out of
+     */
     public void loadJson(File file) {
         try {
             BufferedReader input = new BufferedReader(new FileReader(file));
@@ -153,7 +156,11 @@ public class Game {
 
     }
 
-    public void saveJson(File file ) {
+    /**
+     * this method saves the current structure of the game
+     * @param file loads in the file where it has to save the data into
+     */
+    public void saveJson(File file) {
 
         try {
             PrintWriter writer = new PrintWriter(file);
