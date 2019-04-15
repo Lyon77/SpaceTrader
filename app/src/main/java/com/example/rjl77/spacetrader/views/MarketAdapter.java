@@ -36,7 +36,7 @@ public class MarketAdapter extends RecyclerView.Adapter<MarketAdapter.MarketView
      */
     @NonNull
     @Override
-    public MarketViewHolder onCreateViewHolder(ViewGroup parent, int i) {
+    public MarketViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int i) {
 
         View itemView = LayoutInflater.from(parent.getContext())
                 .inflate(R.layout.market_item, parent, false);
