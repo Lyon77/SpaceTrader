@@ -144,6 +144,7 @@ public class MarketAdapter extends RecyclerView.Adapter<MarketAdapter.MarketView
 
     /**
      * sets the item click listener
+     * @param listener listens for click
      */
     public void setOnItemClickListener(OnItemClickListener listener) {
         this.listener = listener;
