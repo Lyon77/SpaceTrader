@@ -74,10 +74,10 @@ public class SolarSystem {
 //        return techLevel;
 //    }
 
-    /**
-    *Getter for resource
-    *@return resource attribute value
-    */
+//    /**
+//    *Getter for resource
+//    *@return resource attribute value
+//    */
 //    public int getResource() {
 //        return resource;
 //    }
