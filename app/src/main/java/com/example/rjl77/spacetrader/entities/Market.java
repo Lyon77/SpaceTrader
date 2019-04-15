@@ -146,7 +146,7 @@ public class Market {
 
     /**
      * Getter for prices
-     * @return hashmap of items and their prices
+     * @return HashMap of items and their prices
      */
     public HashMap<String, Integer> getPrices() {
         return this.prices;

@@ -30,7 +30,7 @@ public class SolarSystem {
         Random r = new Random();
         techLevel = r.nextInt(7);
 
-        //sets up resources so that nospecialresources is the most common result
+        //sets up resources so that no special resources is the most common result
         //as listed in the game description
         int hasResources = r.nextInt(1);
         if (hasResources == 1) {
@@ -84,7 +84,7 @@ public class SolarSystem {
 
     /**
      * Getter for market items
-     * @return hashmap of items and prices
+     * @return HashMap of items and prices
      */
     public HashMap<String, Integer> getMarket() {
         return market.getPrices();

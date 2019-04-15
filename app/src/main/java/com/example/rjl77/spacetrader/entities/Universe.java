@@ -25,13 +25,13 @@ public class Universe {
      */
     public Universe() {
         system = new HashSet<>();
-        Random cood = new Random();
+        Random r = new Random();
         systemNames = new ArrayList<>(Arrays.asList("Bretel", "Guinifer", "Rubicum", "Iodine",
                 "Laertes", "Omphalos", "Tantalos", "Xerxes", "RIP Kishan", "Exo"));
 
         while (system.size() < 10) {
-            int x = cood.nextInt(20);
-            int y = cood.nextInt(15);
+            int x = r.nextInt(20);
+            int y = r.nextInt(15);
             String name = systemNames.get(system.size());
 
             SolarSystem newSystem = new SolarSystem(x, y, name);
@@ -78,7 +78,7 @@ public class Universe {
 
     /**
      * Getter for market in current system
-     * @return hashmap of items and prices
+     * @return HashMap of items and prices
      */
     public HashMap<String, Integer> getCurrentSystemMarket() {
         return currentSystem.getMarket();

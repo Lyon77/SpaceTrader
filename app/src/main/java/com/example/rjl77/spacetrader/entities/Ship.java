@@ -70,6 +70,14 @@ public class Ship {
     }
 
     /**
+     * Getter for totalCargo
+     * @return totalCargo attribute
+     */
+    public int getTotalCargo() {
+        return totalCargo;
+    }
+
+    /**
      * Determines whether the ship has space to buy a given amount of cargo
      * @param amount amount of cargo
      * @return whether the ship has space for that amount of cargo
