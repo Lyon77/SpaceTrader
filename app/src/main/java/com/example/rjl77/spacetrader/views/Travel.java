@@ -41,7 +41,7 @@ public class Travel extends AppCompatActivity {
 
         Spinner planetSpinner = findViewById(R.id.planet_spinner);
         ArrayAdapter<String> adapter = new ArrayAdapter<>(this,
-                android.R.layout.simple_spinner_item, universe.getSystemNames());
+                R.layout.my_spinner, universe.getSystemNames());
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         planetSpinner.setAdapter(adapter);
 

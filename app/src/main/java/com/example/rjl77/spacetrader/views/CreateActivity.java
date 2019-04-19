@@ -72,7 +72,7 @@ public class CreateActivity extends AppCompatActivity {
         //set difficulty
         Spinner gameDifficultySpinner = findViewById(R.id.game_difficulty_spinner);
         ArrayAdapter<GameDifficulty> adapter = new ArrayAdapter<>(this ,
-                android.R.layout.simple_spinner_item, GameDifficulty.values());
+                R.layout.my_spinner, GameDifficulty.values());
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         gameDifficultySpinner.setAdapter(adapter);
 

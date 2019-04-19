@@ -8,16 +8,28 @@
     app:layout_constraintRight_toRightOf="parent"
     tools:context=".views.PlanetScreen">
 
+
+
+    <pl.droidsonroids.gif.GifImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:cropToPadding="false"
+        android:duplicateParentState="false"
+        android:scaleX="1.1"
+        android:scaleY="1.1"
+        android:src="@drawable/create"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:layout_editor_absoluteX="0dp" />
+
     <TextView
         android:id="@+id/planetName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
         android:layout_marginTop="32dp"
         android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
         android:text="TextView"
+        android:textColor="@color/my_spinner_text_color"
         android:textSize="30sp"
         android:typeface="serif"
         app:layout_constraintEnd_toEndOf="parent"
@@ -27,9 +39,11 @@
     <Button
         android:id="@+id/button_market"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="60dp"
         android:layout_marginTop="16dp"
+        android:background="@android:drawable/btn_star_big_on"
         android:text="market"
+        android:textColor="@color/colorAccent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/button_travel" />
@@ -37,13 +51,13 @@
     <Button
         android:id="@+id/button_travel"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="60dp"
         android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
         android:layout_marginTop="128dp"
         android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
+        android:background="@android:drawable/btn_star_big_on"
         android:text="Travel"
+        android:textColor="@color/colorAccent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/planetName" />
@@ -51,19 +65,22 @@
     <Button
         android:id="@+id/button_new"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
+        android:layout_height="60dp"
+        android:background="@android:drawable/btn_star_big_on"
         android:text="Exit Game"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
+        android:textColor="@color/colorAccent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/button_market" />
 
     <Button
         android:id="@+id/button_save"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="60dp"
         android:layout_marginTop="16dp"
+        android:background="@android:drawable/btn_star_big_on"
         android:text="Save Game"
+        android:textColor="@color/colorAccent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/button_new" />

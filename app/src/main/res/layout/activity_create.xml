@@ -8,12 +8,27 @@
     android:background="#002df2"
     tools:context=".views.MainActivity">
 
+
+
+    <pl.droidsonroids.gif.GifImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:cropToPadding="false"
+        android:duplicateParentState="false"
+        android:scaleX="1.1"
+        android:scaleY="1.1"
+        android:src="@drawable/main"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:layout_editor_absoluteX="0dp" />
+
+
+
     <TextView
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textColor="#ffff00"
         android:text="Create Player"
+        android:textColor="@android:color/background_light"
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
@@ -26,8 +41,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="320dp"
-        android:textColor="#ffff00"
         android:text="Game Difficulty"
+        android:textColor="#ffffff"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -37,39 +52,36 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
         android:layout_marginTop="350dp"
         android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
         android:dropDownWidth="wrap_content"
         android:maxHeight="13dp"
+        style="@style/mySpinnerItemStyle"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/button_create"
-        android:background="#001964"
-        android:textColor="#ffff00"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="70dp"
         android:layout_marginStart="80dp"
-        android:layout_marginLeft="80dp"
         android:layout_marginBottom="16dp"
+        android:background="@android:drawable/btn_star_big_on"
         android:text="Create"
+        android:textColor="@color/colorAccent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
         android:id="@+id/button_new"
-        android:background="#001964"
-        android:textColor="#ffff00"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="70dp"
         android:layout_marginEnd="80dp"
-        android:layout_marginRight="80dp"
         android:layout_marginBottom="16dp"
+        android:background="@android:drawable/btn_star_big_on"
         android:text="Exit"
+        android:textColor="@color/colorAccent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 
@@ -88,8 +100,8 @@
             android:layout_width="105dp"
             android:layout_height="19dp"
             android:layout_centerVertical="true"
-            android:textColor="#ffff00"
-            android:text="Pilot Skill Points:" />
+            android:text="Pilot Skill Points:"
+            android:textColor="#ffffff" />
 
         <EditText
             android:id="@+id/pilot_skill_points"
@@ -100,7 +112,9 @@
             android:gravity="center"
             android:hint="Pilot Skill Points"
             android:inputType="number"
-            android:singleLine="true" />
+            android:singleLine="true"
+            android:textColor="@android:color/background_light"
+            android:textColorHint="@android:color/holo_blue_bright" />
 
     </RelativeLayout>
 
@@ -119,8 +133,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
-            android:textColor="#ffff00"
-            android:text="Fighter Skill Points:" />
+            android:text="Fighter Skill Points:"
+            android:textColor="#ffffff" />
 
         <EditText
             android:id="@+id/fighter_skill_points"
@@ -131,7 +145,9 @@
             android:gravity="center"
             android:hint="Fighter Skill Points"
             android:inputType="number"
-            android:singleLine="true" />
+            android:singleLine="true"
+            android:textColor="@android:color/background_light"
+            android:textColorHint="@android:color/holo_blue_bright" />
 
     </RelativeLayout>
 
@@ -150,8 +166,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
-            android:textColor="#ffff00"
-            android:text="Trader Skill Points:" />
+            android:text="Trader Skill Points:"
+            android:textColor="#ffffff" />
 
         <EditText
             android:id="@+id/trader_skill_points"
@@ -162,7 +178,9 @@
             android:gravity="center"
             android:hint="Trader Skill Points"
             android:inputType="number"
-            android:singleLine="true" />
+            android:singleLine="true"
+            android:textColor="@android:color/background_light"
+            android:textColorHint="@android:color/holo_blue_bright" />
 
     </RelativeLayout>
 
@@ -181,8 +199,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
-            android:textColor="#ffff00"
-            android:text="Engineer Skill Points:" />
+            android:text="Engineer Skill Points:"
+            android:textColor="#ffffff" />
 
         <EditText
             android:id="@+id/engineer_skill_points"
@@ -193,7 +211,9 @@
             android:gravity="center"
             android:hint="Engineer Skill Points"
             android:inputType="number"
-            android:singleLine="true" />
+            android:singleLine="true"
+            android:textColor="@android:color/background_light"
+            android:textColorHint="@android:color/holo_blue_bright" />
 
     </RelativeLayout>
 
@@ -215,8 +235,10 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
-            android:textColor="#ffff00"
-            android:text="Username:" />
+            android:text="Username:"
+            android:textColor="@android:color/background_light"
+            android:textColorHint="@android:color/background_light"
+            android:textColorLink="@android:color/background_light" />
 
         <EditText
             android:id="@+id/username_entry"
@@ -227,9 +249,13 @@
             android:gravity="center"
             android:hint="Username"
             android:inputType="text"
-            android:singleLine="true" />
+            android:singleLine="true"
+            android:textColor="@android:color/background_dark"
+            android:textColorHint="@android:color/holo_blue_bright" />
 
     </RelativeLayout>
+
+
 
 
 </android.support.constraint.ConstraintLayout>

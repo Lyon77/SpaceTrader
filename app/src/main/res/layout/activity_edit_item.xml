@@ -2,8 +2,21 @@
 <android.support.constraint.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
+
+
+    <pl.droidsonroids.gif.GifImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:cropToPadding="false"
+        android:duplicateParentState="false"
+        android:scaleX="1"
+        android:scaleY="1.2"
+        android:src="@drawable/sunset"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:layout_editor_absoluteX="0dp" />
 
     <TextView
         android:id="@+id/name"
@@ -49,7 +62,7 @@
     <TextView
         android:id="@+id/price"
         android:layout_width="wrap_content"
-        android:layout_height="20dp"
+        android:layout_height="wrap_content"
         android:layout_marginLeft="100dp"
         android:layout_marginBottom="400dp"
 
@@ -138,8 +151,8 @@
     <TextView
         android:id="@+id/balance"
         android:layout_width="wrap_content"
-        android:layout_height="16dp"
-        android:layout_marginLeft="100dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="150dp"
         android:layout_marginBottom="200dp"
         android:text="10.00"
         app:layout_constraintBottom_toBottomOf="parent"

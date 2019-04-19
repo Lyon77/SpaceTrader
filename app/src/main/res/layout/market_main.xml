@@ -8,11 +8,26 @@
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context=".views.MarketView">
 
+
+
+    <pl.droidsonroids.gif.GifImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:cropToPadding="false"
+        android:duplicateParentState="false"
+        android:scaleX="1"
+        android:scaleY="1.2"
+        android:src="@drawable/sunset"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:layout_editor_absoluteX="0dp" />
+
+
     <android.support.v7.widget.RecyclerView
         android:id="@+id/market_list"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_marginTop="70dp"
+        app:cardBackgroundColor="@android:color/transparent"
         tools:listitem="@layout/market_item" />
 
     <TextView
@@ -37,6 +52,7 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="170dp"
         android:text="Market"
+        android:textColor="@android:color/background_dark"
         android:textSize="24sp" />
 
     <Button
